@@ -96,9 +96,63 @@ Library files contains actual meaning of each and every words used in the progra
 Source Code (.c) to Preprocessed Code (.i) to Assembly Code (.s) to Object Code (.o) to Executable code (.exe) but no extension in Linux
 
 ## Constants and Variables
-Content here...
+**Variable**: A named memory location used to store data.
+
+**int** age; &nbsp;&nbsp; Because any integer value of age can exist.
+
+**Constant**: A value that cannot be changed during program execution.
+
+**const float** gravity = 9.8; &nbsp;&nbsp; Because only 9.8 exist for value of gravity
+
+
 
 ## Operators
-Content here...
 
+Operators are symbols used to perform operations on variables and values.
 
+For mathematical addition, subtraction, etc.
+
+**Arithmetic**: &nbsp;&nbsp; +, -, *, /, %
+
+For checking the relation between two or more variables.
+
+**Relational**: &nbsp;&nbsp; ==, !=, <, >, <=, >=
+
+For generating logic like AND, OR, NOT
+
+**Logical**: &nbsp;&nbsp; &&, ||, !
+
+## Escape Sequence
+
+Escape sequences are special combinations of character  starting with
+| Sequence | Meaning      |
+| -------- | ------------ |
+| `\n`     | New line     |
+| `\t`     | Tab          |
+| `\\`     | Backslash    |
+| `\"`     | Double quote |
+
+## Data Type Conversion
+
+**Implicit Conversion**: Automatically done by the compiler, no user interference.<br><br>
+
+**Implicit conversion (int → float)**
+
+float x = 5;
+
+**Explicit Conversion** (Type Casting): Manually converting using cast operators.
+
+**Explicit conversion**
+
+int y = (int) 3.14;     
+
+## Input and Output Operations
+
+printf() → Output data.
+scanf() → Input data.
+
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+
+##
