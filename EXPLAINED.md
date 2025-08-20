@@ -26,8 +26,8 @@ Example: **int** means **integer** nothing else.
 ### Identifiers: 
 Any word used in C programming identify something. It could be name of variable, function, array, pointers, etc. We can change the meaning of identifiers.
 
-
 ## Datatypes
+
 During variables decleration we need to specify the type of data that the variable will hold. And this is done by using datatypes. There are various datatypes in C which are shown with respective type, keyword, byte used, range and symbolas given in table below:
 
 ### C Data Types
@@ -46,16 +46,18 @@ During variables decleration we need to specify the type of data that the variab
 ---
 
 **Note:**  
+
 - **char** holds character only not integer and **int** holds only integers not decimal value (float type value)
 - The size of each data type (size = byte used) can vary depending on **compiler** and **architecture** (e.g., 32-bit vs 64-bit systems).  
--    **Range** means the extreme points upto which the datatype can hold data. Out of this range the data will be garbage or not as desired
+- **Range** means the extreme points upto which the datatype can hold data. Out of this range the data will be garbage or not as desired
 - `%d`, `%f`, etc., are **format specifiers** which defines the data format and used in `printf()` and `scanf()` functions.
 
 ## Pre-Processor Directives
+
 Pre-processor directives are instructions that are processed **before** the actual compilation of code.
 **Example**
 
-#include <stdio.h>  // For standard input and output
+#include<stdio.h>// For standard input and output
 
 ## Compilation
 
@@ -86,16 +88,18 @@ This is done by a program called a **compiler** (e.g., GCC, Turbo C).
    - Resolves function calls (like `printf`) to actual addresses in libraries.
    - Output: `.exe` (Windows) or executable (Linux).
 
+### Note
 
-### Note 
 Library files contains actual meaning of each and every words used in the program and help processor to understand the code by linking meaning and words.
 
 ---
 
 ### Compilation Flow
+
 Source Code (.c) to Preprocessed Code (.i) to Assembly Code (.s) to Object Code (.o) to Executable code (.exe) but no extension in Linux
 
 ## Constants and Variables
+
 **Variable**: A named memory location used to store data.
 
 **int** age; &nbsp;&nbsp; Because any integer value of age can exist.
@@ -104,27 +108,26 @@ Source Code (.c) to Preprocessed Code (.i) to Assembly Code (.s) to Object Code 
 
 **const float** gravity = 9.8; &nbsp;&nbsp; Because only 9.8 exist for value of gravity
 
-
-
 ## Operators
 
 Operators are symbols used to perform operations on variables and values.
 
-For mathematical addition, subtraction, etc.
+### For mathematical addition, subtraction, etc
 
 **Arithmetic**: &nbsp;&nbsp; +, -, *, /, %
 
-For checking the relation between two or more variables.
+### For checking the relation between two or more variables
 
-**Relational**: &nbsp;&nbsp; ==, !=, <, >, <=, >=
+**Relational**: &nbsp;&nbsp; ==&nbsp;, !=&nbsp;, <&nbsp;, >&nbsp;, <=&nbsp;, >=
 
-For generating logic like AND, OR, NOT
+### For generating logic like AND, OR, NOT
 
-**Logical**: &nbsp;&nbsp; &&, ||, !
+**Logical**: &nbsp;&nbsp; &&&nbsp;, ||&nbsp;, !
 
 ## Escape Sequence
 
-Escape sequences are special combinations of character  starting with
+Escape sequences are special combinations of character  starting with '\' and used to give new line, tab, etc.
+
 | Sequence | Meaning      |
 | -------- | ------------ |
 | `\n`     | New line     |
@@ -134,54 +137,24 @@ Escape sequences are special combinations of character  starting with
 
 ## Data Type Conversion
 
-**Implicit Conversion**: Automatically done by the compiler, no user interference.<br><br>
+**Implicit Conversion**: Automatically done by the compiler, no user interference.
+**Explicit Conversion** (Type Casting): Manually converting using cast operators.  
 
-**Implicit conversion (int → float)**
+**Implicit conversion (int → float)**  
 
 float x = 5;
 
-**Explicit Conversion** (Type Casting): Manually converting using cast operators.
+**Explicit conversion**  
 
-**Explicit conversion**
-
-int y = (int) 3.14;     
+int y = (int) 3.14;
 
 ## Input and Output Operations
 
-**printf() → Output data.**
-**scanf() → Input data.**  
+printf() → Output data.
+scanf() → Input data.
 
-Example  
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
 
-**int** num;
-**printf**("Enter a number: ");
-**scanf**("%d", &num);
-
-## Control Statements  
-
-Statements that alter normal flow of program execution. In absence of **control statemets** the program instructions are executed in sequential order without any jump or break of program sequence. It's importance when:  
-
-- Need to skip certain instruction based on the condition.
-- When certain value is to be calculated using seperate block of code **function** before moving further down in program. This is because we need that calculated value as parameter for remaining portion of code. Control statements are of following types:  
-  1. Sequencial Logic: Execution of one instruction after another.
-  2. Selection logic/Decision making statements: Condition is tested and on the basis of true or false situation of condition, further code is executed. Its types are: 
-     1. **if**... only
-     2. **if...else**...
-     3. **if....else if ....else**
-     4. **nested if**
-     5. **switch** and
-     6. **goto statement**  
-    
-   
-         if(condition)
-         {
-            instruction to be executed;
-         }
-         else if(condition)
-         {
-            instruction to be executed;
-         }
-         else
-         {
-            instructin to be executed;
-         }
+##
