@@ -148,11 +148,40 @@ int y = (int) 3.14;
 
 ## Input and Output Operations
 
-printf() → Output data.
-scanf() → Input data.
+**printf() → Output data.**
+**scanf() → Input data.**  
 
-int num;
-printf("Enter a number: ");
-scanf("%d", &num);
+Example  
 
-##
+**int** num;
+**printf**("Enter a number: ");
+**scanf**("%d", &num);
+
+## Control Statements  
+
+Statements that alter normal flow of program execution. In absence of **control statemets** the program instructions are executed in sequential order without any jump or break of program sequence. It's importance when:  
+
+- Need to skip certain instruction based on the condition.
+- When certain value is to be calculated using seperate block of code **function** before moving further down in program. This is because we need that calculated value as parameter for remaining portion of code. Control statements are of following types:  
+  1. Sequencial Logic: Execution of one instruction after another.
+  2. Selection logic/Decision making statements: Condition is tested and on the basis of true or false situation of condition, further code is executed. Its types are: 
+     1. **if**... only
+     2. **if...else**...
+     3. **if....else if ....else**
+     4. **nested if**
+     5. **switch** and
+     6. **goto statement**  
+    
+   
+         if(condition)
+         {
+            instruction to be executed;
+         }
+         else if(condition)
+         {
+            instruction to be executed;
+         }
+         else
+         {
+            instructin to be executed;
+         }
