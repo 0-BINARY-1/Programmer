@@ -126,7 +126,7 @@ Operators are symbols used to perform operations on variables and values.
 
 ## Escape Sequence
 
-Escape sequences are special combinations of character  starting with '\' and used to give new line, tab, etc.
+Escape sequences are special combinations of character  starting with **\** and used to give new line, tab, etc.
 
 | Sequence | Meaning      |
 | -------- | ------------ |
@@ -137,8 +137,9 @@ Escape sequences are special combinations of character  starting with '\' and us
 
 ## Data Type Conversion
 
-**Implicit Conversion**: Automatically done by the compiler, no user interference.
-**Explicit Conversion** (Type Casting): Manually converting using cast operators.  
+**Implicit Conversion**: Automatically done by the compiler, no user interference.  
+
+**Explicit Conversion (Type Casting)**: Manually converting using cast operators.  
 
 **Implicit conversion (int → float)**  
 
@@ -150,11 +151,69 @@ int y = (int) 3.14;
 
 ## Input and Output Operations
 
-printf() → Output data.
-scanf() → Input data.
+printf() → Output data.  
 
-int num;
-printf("Enter a number: ");
-scanf("%d", &num);
+scanf() → Input data.  
 
-##
+**int** num;  
+
+**printf**("Enter a number: ");  
+
+**scanf**("%d", &num);  
+
+## Control Statements in C
+
+Control statements are used to **control the flow of execution** in a program based on certain conditions. They are divided into three main categories:
+
+1. **Decision-Making Statements** → `if`, `if-else`, `if-else-if`, `switch`
+2. **Looping Statements** → `for`, `while`, `do-while`
+3. **Jump Statements** → `break`, `continue`, `goto`, `return`
+
+---
+
+### **1. if Statement**
+
+The `if` statement is used to execute a block of code **only if** the given condition is **true**. There is no other option if the condition is false.
+
+**Syntax:**
+
+```c
+if (condition) 
+{
+    // code to execute when condition is true
+}
+```
+
+### **2. if...else Statement**
+
+The if...else statement executes one block of code if the condition is **true**, and another block if the condition is **false**.
+
+```c
+if (condition)
+{
+    // code when condition is true
+} 
+else
+{
+    // code when condition is false
+}
+```
+
+### **3. if...else if...else Statement**
+
+The **if...else if...else** statement is used when you need to check multiple conditions like for 3 cases first condition false then execute second condition and if second condition also false then execute third condition.
+
+```c
+if (condition1)
+{
+    // code when condition1 is true
+}
+else if (condition2)
+{
+    // code when condition2 is true
+}
+else
+{
+    // code when all privious condition are false.
+}
+```
