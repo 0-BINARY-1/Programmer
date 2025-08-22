@@ -1,29 +1,34 @@
 # Important concepts and theory retated to C
+
 I have provided basic info about each and every topic you will need during this course.
 
 ## 📋 Table of Contents
-1. [Keywords and Identifier]()
-2. [Datatype]()
-3. [Pre-Processor Directives]()
-4. [Compilation]()
-5. [Constants and Variables]()
-6. [Operators]()
-7. [Escape Key]()
-8. [Data Type Conversion]()
-9. [Input and Output Operations]()
-10. [Control Statements]()
-11. [Array and Strings]()
-12. [Function]()
-13. [Pointers]()
-14. [Structure, Union]()
-15. [Data files]()
-    
+
+1. [Keywords and Identifier](K&I)
+2. [Datatype](Datatype)
+3. [Pre-Processor Directives](PPD)
+4. [Compilation](Compilition)
+5. [Constants and Variables](C&V)
+6. [Operators](Operators)
+7. [Escape Key](EK)
+8. [Data Type Conversion](DTC)
+9. [Input and Output Operations](I&O)
+10. [Control Statements](CS)
+11. [Array and Strings](A&S)
+12. [Function](Function)
+13. [Pointers](Pointors)
+14. [Structure, Union](Structure&Union)
+15. [Data files](DF)
+
 ## Keywords and Identifier
-### Keywords: 
+
+### Keywords
+
 Reserved word with fix meaning and the meaning can't be changed as user requires.
 Example: **int** means **integer** nothing else.
 
-### Identifiers: 
+### Identifiers
+
 Any word used in C programming identify something. It could be name of variable, function, array, pointers, etc. We can change the meaning of identifiers.
 
 ## Datatypes
@@ -57,7 +62,9 @@ During variables decleration we need to specify the type of data that the variab
 Pre-processor directives are instructions that are processed **before** the actual compilation of code.
 **Example**
 
+```C
 #include<stdio.h>// For standard input and output
+```
 
 ## Compilation
 
@@ -216,4 +223,102 @@ else
 {
     // code when all privious condition are false.
 }
+```
+
+### **4 switch Statement**
+
+Used when you have **multiple options** based on the value of a variable.
+
+```c
+switch (expression)
+{
+    case value 1:
+        // Code to execute when value 1 selected.
+        break;
+    case value2:
+        // Code to execute when value 2 selected.
+        break;
+    ...
+    ...
+    default:
+        // Code to execute when no value selected.
+}
+```
+
+## Looping Statements
+
+Looping statements are used to repeat a block of code where **same task** is performed multiple times.
+
+### **1. For Loop**
+
+This looping statement is used when the number of **iteration** is known. Iteration means the number of times we have to do a task. e.g 5 means do same task 5 times.
+
+**Syntax:**
+
+```c
+for(initialization; condition; increment/decrement) 
+{
+    // Code to be execute
+}
+```
+
+**Initilization:**&nbsp; This specifies about where the loop starts.  
+**Condition:**&nbsp; This is to indicate termination point or condition.
+**increment/decrement:**&nbsp; This is to move to next task until the condition is false.
+
+Example:
+
+```c
+for(int i = 1; i <= 5; i++)
+{
+    printf("%d ", i);
+}
+```
+
+### **2. While Loop**
+
+This looping statement is used when the number of **iteration** is unknown but the end of repetated task depends on certain condition. If the condition is satisfied then only the code is execuated.
+
+**Syntax:**
+
+```c
+while(condition) 
+{
+    // Code executes while condition is true
+}
+```
+
+Example:
+
+```c
+int i = 1;
+while(i <= 5) 
+{
+    printf("%d ", i);
+    i++;
+}
+```
+
+### **3. do..while Loop**
+
+Similar to while but **executes at least once** even the comdition in while is false.
+
+**Syntax:**
+
+```c
+do
+{
+    // Code executes first, then condition is checked
+} while(condition);
+```
+
+Example:
+
+```c
+int i = 1;
+do
+{
+    printf("%d ", i);
+    i++;
+} while(i <= 5);
 ```
