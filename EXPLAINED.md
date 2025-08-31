@@ -419,10 +419,35 @@ An **array** in C is a **collection of elements** of the **same data type** stor
 It allows you to store and process multiple values using a **single variable name**. We don't need to declare **n** different variable names for **n** different values.
 
 **Same data type:** All values should have same features. You can't store **integer** and **float** in same array.
-**Contiguous Memory Locations:** This means the elements are placed **sequentially** in memory **one after another** without any gap. You can refer to below image:
+**Contiguous Memory Locations:** This means the elements are placed **sequentially** in memory **one after another** without any gap. You can refer to below image. Every boxes in below figure represent each **memory cell** or group of **memory cells**.
 
-![2D Contiguous meomory location diagram](2D-matrix-table.png)
-![2D Non-Contiguous meomory location diagram](Non-Contiguous-ML.png)
+**Memory Cell** : A memory cell is the fundamental unit of data storage in a computer, capable of holding a single bit of information, either a 0 or a 1.
+
+In below figure we can see no seperation so the number in contiguous fashion.  
+
+**Single array:**  
+
+arr[16] = {11,14,2,55,3,4,33,10,4,8,20,28,7,45,17,9}
+
+![2D Contiguous meomory location diagram](CML.png)  
+
+In below figure we can see different set of numbers seperated by blank space so the data in not contiguous.
+
+**Multiple array:**  
+
+A1[4]={11,14,2,55,3}  
+
+A2[2]={33,10}  
+
+A3[2]={20,5}  
+
+A4[2]={7,45}  
+
+A5[2]={64,9}  
+
+3 blank spaces which broke the continuous nature.
+
+![2D Non-Contiguous meomory location diagram](NCML.png)
 
 Example:  
 
@@ -443,11 +468,11 @@ Good practice: By declearing array
 ```c
 // All elements have same datatype which in integer.
 
-int natural_numbers[100] = {1,2,3,4,5,6,...,100};
+int natural_numbers[100] = {1, 2, 3, 4, 5, 6, ..., 100};
 
 // All elements have same datatype which in float.
 
-float numbers[5] = [2.2,3.4,3.2,3.0,4.555];
+float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 
 ```
 
@@ -465,11 +490,164 @@ float numbers[5] = [2.2,3.4,3.2,3.0,4.555];
 | **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
 | **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
 
-
 ## 1️⃣ One-Dimensional (1D) Array
 
-### **Declaration:**
+Stores data in single **row**. If we start dealing with column than it is 2D matrix.
+
+**Syntax for 1D array:**
 
 ```c
 data_type array_name[size];
+```
+
+**Example:**
+
+```c
+    int num[5] // Just array declaration.
+
+    int num[3] = {1, 13, 6}; // Declaration and Initilization both at once. Intex (0, 1, 2)
+
+    printf("%d", num[2]); /* Accessing the data. Result will be 6 because index 0, 1, 2 
+    equals to 1, 13, 6 respectively.*/
+```
+
+**Complete example program:**
+
+```c
+#include <stdio.h>
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+    for(int i = 0; i < 5; i++)
+    {
+        printf("arr[%d] = %d\n", i, arr[i]);
+    }
+    return 0;
+}
+
+```
+
+**Output:**
+
+```c
+arr[0] = 1
+arr[1] = 2
+arr[2] = 3
+arr[3] = 4
+arr[4] = 5
+```
+
+## 2️⃣ Two-Dimensional (2D) Array
+
+A 2D array is used to store data in **rows and columns** like a **table** or **matrix**.  
+
+**Syntax of 2D array:**
+
+```c
+data_type array_name[rows][columns];
+```
+
+**Example:**
+
+```c
+    int matrix[2][3]; // Just array declaration.
+
+    int matrix[2][3] = {{1, 2, 3},{4, 5, 6}}; // Declaration and Initilization both at once. Intex (0, 1, 2)
+
+    printf("%d", matrix[1][2]); /* Accessing the data. Result will be 6 because index 12 represent 6. 1st row 2nd column.
+    */
+```
+
+**Complete example program:**
+
+```c
+#include <stdio.h>
+int main()
+{
+    int mat[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    for(int i = 0; i < 2; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Output:**
+
+```c
+1 2 3
+4 5 6
+```
+
+## 2️⃣ Multi-Dimensional Array
+
+A multi-dimensional array has **more than two dimensions**.
+
+**Syntax of multi-dimensional array:**
+
+```c
+data_type array_name[layer/table][row][column];
+
+// layers/tables represent the number of tables in multi-dimensional matrix.
+```
+
+**Example:**
+
+```c
+    int matrix[2][3][2]; // Just array declaration.
+
+    int matrix[2][3][2] =
+    {{{1, 2}, {3, 4}, {5, 6}},
+    {{7, 8}, {9, 10}, {11, 12}}
+    }; // Declaration and Initilization both at once.
+
+    printf("%d", arr[2][3][2]); /* Accessing the data. Result will be 12 because  2nd table row 3rd row and 2nd column.
+    */
+```
+
+**Complete example program:**
+
+```c
+#include <stdio.h>
+int main()
+{
+    int matrix[2][3][2] ={{{1, 2}, {3, 4}, {5, 6}},{{7, 8}, {9, 10}, {11, 12}}}
+    for(int i = 0; i < 2; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            for(int k = 0; k < 2; k++)
+            {
+                 printf("%d ", mat[j][k]);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+**Output:**
+
+```c
+Layer 1:
+
+ | Col1 | Col2 |
+ | ---- | ---- |
+ | 1    | 2    |
+ | 3    | 4    |
+ | 5    | 6    |
+
+Layer 2:
+
+| Col1 | Col2 |
+| ---- | ---- |
+| 7    | 8    |
+| 9    | 10   |
+| 11   | 12   |
 ```
