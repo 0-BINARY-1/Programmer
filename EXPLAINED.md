@@ -412,3 +412,68 @@ int add(int a, int b)
 | Decision Making    | `if`, `else`, `switch`                | Executes blocks based on conditions | `if(x>5)`          |
 | Looping            | `for`, `while`, `do-while`            | Repeats code multiple times         | `for(i=0;i<5;i++)` |
 | Jumping            | `break`, `continue`, `goto`, `return` | Transfers control in a program      | `break;`           |
+
+## Arrays in C Programming
+
+An **array** in C is a **collection of elements** of the **same data type** stored in **contiguous memory locations**.  
+It allows you to store and process multiple values using a **single variable name**. We don't need to declare **n** different variable names for **n** different values.
+
+**Same data type:** All values should have same features. You can't store **integer** and **float** in same array.
+**Contiguous Memory Locations:** This means the elements are placed **sequentially** in memory **one after another** without any gap. You can refer to below image:
+
+![2D Contiguous meomory location diagram](2D-matrix-table.png)
+![2D Non-Contiguous meomory location diagram](Non-Contiguous-ML.png)
+Example:  
+
+Not good practice: Without declearing array
+
+```c
+// You can keep any variable name.
+int a = 1;
+int b = 2;
+int c = 3;
+...
+int zo = 100;
+
+```
+
+Good practice: By declearing array
+
+```c
+// All elements have same datatype which in integer.
+
+int natural_numbers[100] = {1,2,3,4,5,6,...,100};
+
+// All elements have same datatype which in float.
+
+float numbers[5] = [2.2,3.4,3.2,3.0,4.555];
+
+
+
+```
+
+
+## 📌 Key Features of Arrays
+- Stores multiple values under a single name.
+- Elements are **stored in sequence** in memory.
+- Each element is accessed using an **index** (starting from `0`).
+- Supports **iteration** using loops.
+- Can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
+
+---
+
+## 🧩 Types of Arrays
+
+| **Type**         | **Description**                          | **Example**      |
+|------------------|----------------------------------------|------------------|
+| **1D Array**     | Stores data in a single row.           | `int arr[5];`    |
+| **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
+| **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
+
+---
+
+## 1️⃣ One-Dimensional (1D) Array
+
+### **Declaration:**
+```c
+data_type array_name[size];
