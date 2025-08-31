@@ -423,6 +423,7 @@ It allows you to store and process multiple values using a **single variable nam
 
 ![2D Contiguous meomory location diagram](2D-matrix-table.png)
 ![2D Non-Contiguous meomory location diagram](Non-Contiguous-ML.png)
+
 Example:  
 
 Not good practice: Without declearing array
@@ -448,19 +449,13 @@ int natural_numbers[100] = {1,2,3,4,5,6,...,100};
 
 float numbers[5] = [2.2,3.4,3.2,3.0,4.555];
 
-
-
 ```
 
-
 ## 📌 Key Features of Arrays
-- Stores multiple values under a single name.
-- Elements are **stored in sequence** in memory.
-- Each element is accessed using an **index** (starting from `0`).
-- Supports **iteration** using loops.
-- Can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
 
----
+- Each element is accessed using an **index** (index starts from `0`).
+- We can use **iteration** using loops to insert and access the values.
+- Array can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
 
 ## 🧩 Types of Arrays
 
@@ -470,10 +465,11 @@ float numbers[5] = [2.2,3.4,3.2,3.0,4.555];
 | **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
 | **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
 
----
 
 ## 1️⃣ One-Dimensional (1D) Array
 
 ### **Declaration:**
+
 ```c
 data_type array_name[size];
+```
