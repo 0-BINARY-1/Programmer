@@ -322,3 +322,93 @@ do
     i++;
 } while(i <= 5);
 ```
+
+## Jump statement
+
+This is used to **transfer control** to different part of the program as required.
+
+### **1. Break Statement**
+
+Terminates the **loop** or **switch statements** immediately.  
+
+Example:
+
+For Loop statement:
+
+```c
+for(int i=1; i<=5; i++) 
+{
+    if(i == 3)
+    break;
+    printf("%d ", i);
+    // This will break the loop when i == 3 and stop the program.
+    //Output: 1,2
+}
+```
+
+Switch statement:
+
+```c
+switch (expression)
+{
+    case value 1:
+        // Code to execute when value 1 selected.
+        break;
+}
+```
+
+### **2. Continue Statement**  
+
+Skips the **current iteration** and moves to the next.
+
+Example:
+
+```c
+for(int i=1; i<=5; i++) 
+{
+    if(i == 3) 
+    continue;
+    printf("%d ", i);
+    // It will not print the value when i equals to 3 but print in other cases:
+    // Output: 1,2,4,5
+}
+```
+
+### **3. goto Statement**
+
+Transfers control to a **labeled** statement or position in the code.
+
+Example:
+
+```C
+int i = 1;
+start:
+printf("%d ", i);
+i++;
+if(i <= 5) goto start;
+/* the control point with transfer to line 2 from line 5 and output will be
+1,2,3,4,5
+*/
+```  
+
+### **4. return Statement**
+
+Used to exit the **current function** and return value while exisiting.
+
+Example:
+
+```c
+int add(int a, int b)
+{
+    return a + b;
+}
+/* This will add a and b and then return the sum to the point of it's call.*/
+```
+
+## Summery
+
+| **Statement Type** | **Keyword(s)**                        | **Purpose**                         | **Example**        |
+| ------------------ | ------------------------------------- | ----------------------------------- | ------------------ |
+| Decision Making    | `if`, `else`, `switch`                | Executes blocks based on conditions | `if(x>5)`          |
+| Looping            | `for`, `while`, `do-while`            | Repeats code multiple times         | `for(i=0;i<5;i++)` |
+| Jumping            | `break`, `continue`, `goto`, `return` | Transfers control in a program      | `break;`           |
