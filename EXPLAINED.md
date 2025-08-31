@@ -418,36 +418,17 @@ int add(int a, int b)
 An **array** in C is a **collection of elements** of the **same data type** stored in **contiguous memory locations**.  
 It allows you to store and process multiple values using a **single variable name**. We don't need to declare **n** different variable names for **n** different values.
 
-**Same data type:** All values should have same features. You can't store **integer** and **float** in same array.
-**Contiguous Memory Locations:** This means the elements are placed **sequentially** in memory **one after another** without any gap. You can refer to below image. Every boxes in below figure represent each **memory cell** or group of **memory cells**.
+**Same data type:**  
 
-**Memory Cell** : A memory cell is the fundamental unit of data storage in a computer, capable of holding a single bit of information, either a 0 or a 1.
+All values should have same features. You can't store **integer** and **float** in same array.  
 
-In below figure we can see no seperation so the number in contiguous fashion.  
+**Contiguous Memory Locations:**  
 
-**Single array:**  
+This means the elements are placed **sequentially** in memory **one after another** without any gap. You can refer to below image. Every boxes in below figure represent each **memory cell** or group of **memory cells**.
 
-arr[16] = {11,14,2,55,3,4,33,10,4,8,20,28,7,45,17,9}
+**Memory Cell**  
 
-![2D Contiguous meomory location diagram](CML.png)  
-
-In below figure we can see different set of numbers seperated by blank space so the data in not contiguous.
-
-**Multiple array:**  
-
-A1[4]={11,14,2,55,3}  
-
-A2[2]={33,10}  
-
-A3[2]={20,5}  
-
-A4[2]={7,45}  
-
-A5[2]={64,9}  
-
-3 blank spaces which broke the continuous nature.
-
-![2D Non-Contiguous meomory location diagram](NCML.png)
+A memory cell is the fundamental unit of data storage in a computer, capable of holding a single bit of information, either a 0 or a 1.
 
 Example:  
 
@@ -476,13 +457,13 @@ float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 
 ```
 
-## 📌 Key Features of Arrays
+## Key Features of Arrays
 
 - Each element is accessed using an **index** (index starts from `0`).
 - We can use **iteration** using loops to insert and access the values.
 - Array can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
 
-## 🧩 Types of Arrays
+## Types of Arrays
 
 | **Type**         | **Description**                          | **Example**      |
 |------------------|----------------------------------------|------------------|
@@ -490,7 +471,7 @@ float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 | **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
 | **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
 
-## 1️⃣ One-Dimensional (1D) Array
+## One-Dimensional (1D) Array
 
 Stores data in single **row**. If we start dealing with column than it is 2D matrix.
 
@@ -537,7 +518,7 @@ arr[3] = 4
 arr[4] = 5
 ```
 
-## 2️⃣ Two-Dimensional (2D) Array
+## Two-Dimensional (2D) Array
 
 A 2D array is used to store data in **rows and columns** like a **table** or **matrix**.  
 
@@ -584,7 +565,7 @@ int main()
 4 5 6
 ```
 
-## 2️⃣ Multi-Dimensional Array
+## Multi-Dimensional Array
 
 A multi-dimensional array has **more than two dimensions**.
 
