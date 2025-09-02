@@ -632,3 +632,54 @@ Layer 2:
 | 9    | 10   |
 | 11   | 12   |
 ```
+
+## String in C Programming
+
+String is the sequences of characters stored in a **character array** and terminated by a **null character (`'\0'`)** in the C programming language.
+Since C does not have a built-in string data type like some other languages (e.g., Python or Java), strings are handled using arrays of characters.  
+
+**Below is the example:**
+
+```c
+char str[] = "Hello";
+```
+
+**Explanation:**
+
+Name of variable storing the string is **str**
+(`[]`) This sign represent it is an array.
+**char** is data-type used to specify the data entered are alphabetical letters. C doesn't have seperate data-type to handle **string**.
+At last of each string their is **null character** denoted by (`'\0'`)
+How stored in different memory location on storage device.  
+
+Indexing:  
+
+```c
+| Index | Letter |
+| ---- | ---- |
+| 0   | H    |
+| 1    | e   |
+| 2   | l   |
+| 3    | l   |
+| 4   | o   |
+```
+
+### String decleration
+
+We have **two ways** to decleare the string in C programming which are explained below:
+
+**Using String Literals:**
+
+Here, the compiler automatically adds the null character (`'\0'`).
+
+```C
+char name[] = "Santosh";
+```
+
+**Using Character Arrays:**
+
+```C
+char name[8] = {'S', 'a', 'n', 't', 'o', 's', 'h', '\0'};
+```
+
+### String Initilization
