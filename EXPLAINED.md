@@ -635,24 +635,6 @@ int main()
 
 **Output:**
 
-```c
-Layer 1:
-
- | Col1 | Col2 |
- | ---- | ---- |
- | 1    | 2    |
- | 3    | 4    |
- | 5    | 6    |
-
-Layer 2:
-
-| Col1 | Col2 |
-| ---- | ---- |
-| 7    | 8    |
-| 9    | 10   |
-| 11   | 12   |
-```
-
 ## String in C Programming
 
 String is the sequences of characters stored in a **character array** and terminated by a **null character (`'\0'`)** in the C programming language.
