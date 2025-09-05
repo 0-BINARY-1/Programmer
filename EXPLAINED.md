@@ -591,6 +591,26 @@ data_type array_name[layer/table][row][column];
     */
 ```
 
+**Output:**
+
+```c
+Layer 1:
+
+ | Col1 | Col2 |
+ | ---- | ---- |
+ | 1    | 2    |
+ | 3    | 4    |
+ | 5    | 6    |
+
+Layer 2:
+
+| Col1 | Col2 |
+| ---- | ---- |
+| 7    | 8    |
+| 9    | 10   |
+| 11   | 12   |
+```
+
 **Complete example program:**
 
 ```c
