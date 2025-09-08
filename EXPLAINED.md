@@ -638,7 +638,7 @@ int main()
 ## String in C Programming
 
 String is the sequences of characters stored in a **character array** and terminated by a **null character (`'\0'`)** in the C programming language.
-Since C does not have a built-in string data type like some other languages (e.g., Python or Java), strings are handled using arrays of characters.  
+Since C does not have a built-in string data type like some other languages (e.g., Python or Java), strings are handled using arrays of characters using **char** datatype.  
 
 **Below is the example:**
 
@@ -651,22 +651,30 @@ char str[] = "Hello";
 Name of variable storing the string is **str**
 (`[]`) This sign represent it is an array.
 **char** is data-type used to specify the data entered are alphabetical letters. C doesn't have seperate data-type to handle **string**.
-At last of each string their is **null character** denoted by (`'\0'`)
+At last each string is terminated with **null character** denoted by (`'\0'`)
+
+String Table for **"Hello"** with index position of each letter.
+
+This table represents each character of the string **"Hello"** along with its **index position**.
+
+---
+
+### Indexed Table
+
+| **Index** | 0 | 1 | 2 | 3 | 4 | 5 |
+|-----------|---|---|---|---|---|---|
+| **Letter** | H | e | l | l | o | (space)|
+
+---
+
+**Explanation:**
+
+- The **index** starts from **0**.
+- At **index 5**, there is a **space character**.
+- Total characters = **11** (10 letters + 1 space).
 How stored in different memory location on storage device.  
 
-Indexing:  
-
-```c
-| Index | Letter |
-| ---- | ---- |
-| 0   | H    |
-| 1    | e   |
-| 2   | l   |
-| 3    | l   |
-| 4   | o   |
-```
-
-### String decleration
+### String decleration and initilization
 
 We have **two ways** to decleare the string in C programming which are explained below:
 
@@ -680,8 +688,113 @@ char name[] = "Santosh";
 
 **Using Character Arrays:**
 
+Here, we have to automatically add the null characters.
+
 ```C
 char name[8] = {'S', 'a', 'n', 't', 'o', 's', 'h', '\0'};
 ```
 
-### String Initilization
+**Proper initilization:**
+
+To make proper initilization, we give the size of the array. Keep in mind that your array size is enough to hold the terminating character (`'\0'`) at last along with data.
+
+```c
+char str1[20] = "C Programming";   // Proper initialization
+```
+
+**Improper intilization:**
+
+In improper initilization, we donot give the size of array. Compiler automatically calculate the size of the array which is enough to hold terminatin character (`'\0'`).
+
+```c
+char str2[] = "C Programming";              // Compiler calculates size automatically
+```
+
+### Input and Output of String in C
+
+For input and output of a string in C programming we use (`'<stdio.h>'`) as header file.
+For taking input we use (`'scanf()'`) function and (`'printf()'`) function for output.
+But, we have problem with (`'scanf()'`) function because it stops at space. Let say we want to read name **Santosh Bhat**. Now the (`'scanf()'`) function will only read upto **Santosh** but not **Bhat** because as soon as we hit space after typing **Santosh** it will start reading another value in another variable.
+
+**Solution:**
+
+We use (`'fgets()'`) function or modify the (`'scanf()'`) function content to read full text including the space character. You can see it in example below:
+
+**Example:**
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char name[20],Name[20],NAME[20];
+    printf("Enter your name a: ");
+    scanf("%s", name);  // Stops at first space
+    printf("Enter your name b: ");
+    scanf("%[^\n]s", Name);  // Doesn't stops at space but stops at next line (enter) command.
+    printf("Enter your name c: ");
+    fgets(NAME, sizeof(NAME), stdin); // Doesn't stops at spaces and take input after we press enter.
+    // Printing the output
+    printf("Hello, %s!\n", name);
+    printf("Hello, %s!\n", Name);
+    printf("Hello, %s!\n", NAME); 
+    return 0;
+}
+```
+
+**Output**
+
+```c
+Enter your name a: Santosh 
+Enter your name b: Santosh Bhat
+Enter your name c: Santosh Bhat
+Hello, Santosh!
+Hello, Santosh Bhat!
+Hello, Santosh Bhat!
+!
+```
+
+### String Functions in C
+
+To handle string in C we have following stirng functions. Header file **(`'<string.h>'`)** is used.
+
+| Function      | Description                         | Example Usage           |
+| ------------- | ----------------------------------- | ----------------------- |
+| `strlen(s)`   | Returns length of string            | `strlen("Hi") → 2`      |
+| `strcpy(a,b)` | Copies `b` into `a`                 | `strcpy(a,b)`           |
+| `strcat(a,b)` | Appends `b` to `a`                  | `strcat(a,b)`           |
+| `strcmp(a,b)` | Compares strings                    | `strcmp("Hi","Hi") → 0` |
+| `strchr(s,c)` | Finds first occurrence of character | `strchr("apple",'p')`   |
+| `strstr(a,b)` | Finds substring                     | `strstr("Hello","lo")`  |
+
+**Program Examples:**
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[20] = "Hello";
+    char str2[20] = "Programmers";
+
+    printf("Length of str2: %lu\n", strlen(str2)); //calculating the length of the str2
+
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1); //joining given two strings.
+
+    if(strcmp(str1, str2) == 0) //comparing the given strings are equal or not.
+        printf("Strings are equal\n");
+    else
+        printf("Strings are not equal\n");
+
+    return 0;
+}
+
+```
+
+**Output:**
+
+```c
+Length of str2: 11
+Concatenated string: HelloProgrammers
+Strings are not equal
+```
