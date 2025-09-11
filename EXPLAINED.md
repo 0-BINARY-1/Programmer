@@ -726,17 +726,19 @@ We use (`'fgets()'`) function or modify the (`'scanf()'`) function content to re
 #include <stdio.h>
 #include <string.h>
 int main() {
-    char name[20],Name[20],NAME[20];
+    char name[20];
+    char Name[20];
+    char NAME[20];
     printf("Enter your name a: ");
-    scanf("%s", name);  // Stops at first space
+    fgets(NAME, sizeof(NAME), stdin); // Doesn't stops at spaces and take input after we press enter.
     printf("Enter your name b: ");
     scanf("%[^\n]s", Name);  // Doesn't stops at space but stops at next line (enter) command.
     printf("Enter your name c: ");
-    fgets(NAME, sizeof(NAME), stdin); // Doesn't stops at spaces and take input after we press enter.
+    scanf("%s", name);  // Stops at first space
     // Printing the output
-    printf("Hello, %s!\n", name);
-    printf("Hello, %s!\n", Name);
     printf("Hello, %s!\n", NAME); 
+    printf("Hello, %s!\n", Name);
+    printf("Hello, %s!\n", name);
     return 0;
 }
 ```
@@ -744,13 +746,13 @@ int main() {
 **Output**
 
 ```c
-Enter your name a: Santosh 
+Enter your name a: Santosh Bhat
 Enter your name b: Santosh Bhat
 Enter your name c: Santosh Bhat
+
+Hello, Santosh Bhat!
+Hello, Santosh Bhat!
 Hello, Santosh!
-Hello, Santosh Bhat!
-Hello, Santosh Bhat!
-!
 ```
 
 ### String Functions in C
@@ -797,4 +799,186 @@ int main() {
 Length of str2: 11
 Concatenated string: HelloProgrammers
 Strings are not equal
+```
+
+## Function in C Programming
+
+Function is self-contained block of code (**sub-function**) designed to do specific, well-defined task when called by the main function or another sub-function. In C-programming the execution of any program begins with **main()** function. Any word with small bracket **()** are function.The main components of function are as follow:
+
+1. **Function decleration/prototyping:**
+   It tells the compiler about the functions that are present in the program. This is done for the user defined type function only.
+
+   **Syntax:**
+   ```c
+   return_type function_name(parameter1, parameter2, ...);
+   ```
+
+   **Example:**
+
+   ```c
+   int sum(int a,int b);
+   //it is optional to give variable name during decleration of function.
+   ```
+
+2. **Function call:**
+   Written in main() function and the **control point** is passed to the respective function which is called and return to same point after execution of the called function completes.  
+
+   **Syntax:**
+   ```c
+   function_name(parameter1, parameter2,...); 
+   ```
+
+   **Example:**
+   ```c
+   sum(a,b);
+   ```
+3. **Function defination:**
+   In this section commands to be executed to do the task of the called function are written.
+
+   **Syntax:**
+   ```c
+   return_type function_name(parameters1,parameter2,...)
+   
+   {
+        //code to be executed
+   }
+   ```
+
+Some examples of function:  
+
+- printf()
+- scanf()
+- main()
+- getch()
+- strcmp() etc.
+
+Mainly **two** types of function are there in C programming as listed below:
+
+1. **Library(built-in) Function:**
+   
+   Function already written and stored in the library of C - programming language for programmer to do some operations quickly by just using it's header file and writhing function name with necessary parameters as the function require.  
+   Some examples are:
+
+   1. strcmp(): for string comparision
+   2. printf(): for displaying the output on the output screen etc.
+
+2. **User-defined Function:**
+   
+   Function which are written by the user as per the requirements. Like user need to do addition, then he/she can create function with name **sum(), add(), addition(),** or any other **name as perfered**, and define how the function should do addition and how the data are **acquired** and how the result is **displayed**.
+
+   **Important Terms**
+
+   Return type can be any of these **void, int, float, char, etc.**
+
+   - **Return:** This implies that the sub function returns its output to the main function. Return type could be: int, float, char, etc.
+
+     - **int** return type means the sub-function returns the integer value.
+     - **float** return type means the sub-function returns the floating point value.
+     - **char** return type means the sub-function returns the character value.  
+
+   - **Void:** This implies that the sub function doesn't return any value to the main function.  
+
+### Types of user defined functions
+
+1. **Passing parameters and Returning Value**
+   
+   **Syntax:**
+   ```c
+   return_type function_name(parameter1, parameter2,...);
+   ```
+
+   **Example:**
+   ```c
+   int sum(int, int);
+   ```
+
+2. **Passing parameters and No Returning Value**
+   
+   **Syntax:**
+   ```c
+   return_type function_name(parameter1, parameter2,...);
+   ```
+
+   **Example:**
+   ```c
+   void sum(int, int);
+   ```
+
+3. **Not Passing parameters and Returing Value**
+   
+   **Syntax:**
+   ```c
+   return_type function_name(parameter1, parameter2,...);
+   ```
+
+   **Example:**
+   ```c
+   int sum();
+   ```
+
+4. **Not Passing parameters and No Returning Value**
+   
+   **Syntax:**
+   ```c
+   return_type function_name(parameter1, parameter2,...);
+   ```
+
+   **Example:**
+   ```c
+   void sum(int, int);
+   ```
+
+### Concept of recursion in function
+
+When any problem can be divided into small fragments with similar natures then we use concept of recursion to solve such problems in function. **Programming technique where a sub-function call itself untill the terminating condition to stop the calling loop is satisfied.** The function name should be same else it will not work, because the compiler will think user are calling another function.
+
+**Syntax:**
+
+In function definitation.
+
+```c
+int sum(int a)
+{
+    if(a>=0) // stopping condition
+    return a + sum(a-1);  // recursion
+}
+```
+
+Problem like finding factorial of any number or finding fibonacci series and many more can be done using recursion.
+
+### Array in function
+
+We can use the array in the function by passing as parameter which is shown below:
+
+**Syntax:**
+
+```c
+return_type function_name(datatype array_name[size]);
+```
+
+**Example**
+
+```c
+// In function prototyping
+int sum(int a[]); 
+
+// In main function
+
+int main()
+{
+    int a[5],f,i;
+    f = sum(a); // Function call with array as parameter.
+}
+
+// In function definitation
+
+int sum(int a[])
+{
+    int c = 0, i;
+    for(i=0;i<5;i++)
+    {
+        c = c + a[i];
+    }
+    return c;
+}
 ```
