@@ -726,17 +726,19 @@ We use (`'fgets()'`) function or modify the (`'scanf()'`) function content to re
 #include <stdio.h>
 #include <string.h>
 int main() {
-    char name[20],Name[20],NAME[20];
+    char name[20];
+    char Name[20];
+    char NAME[20];
     printf("Enter your name a: ");
-    scanf("%s", name);  // Stops at first space
+    fgets(NAME, sizeof(NAME), stdin); // Doesn't stops at spaces and take input after we press enter.
     printf("Enter your name b: ");
     scanf("%[^\n]s", Name);  // Doesn't stops at space but stops at next line (enter) command.
     printf("Enter your name c: ");
-    fgets(NAME, sizeof(NAME), stdin); // Doesn't stops at spaces and take input after we press enter.
+    scanf("%s", name);  // Stops at first space
     // Printing the output
-    printf("Hello, %s!\n", name);
-    printf("Hello, %s!\n", Name);
     printf("Hello, %s!\n", NAME); 
+    printf("Hello, %s!\n", Name);
+    printf("Hello, %s!\n", name);
     return 0;
 }
 ```
@@ -744,13 +746,13 @@ int main() {
 **Output:**
 
 ```c
-Enter your name a: Santosh 
+Enter your name a: Santosh Bhat
 Enter your name b: Santosh Bhat
 Enter your name c: Santosh Bhat
+
+Hello, Santosh Bhat!
+Hello, Santosh Bhat!
 Hello, Santosh!
-Hello, Santosh Bhat!
-Hello, Santosh Bhat!
-!
 ```
 
 ### String Functions in C
