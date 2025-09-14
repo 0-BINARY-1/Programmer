@@ -741,7 +741,7 @@ int main() {
 }
 ```
 
-**Output**
+**Output:**
 
 ```c
 Enter your name a: Santosh 
@@ -798,3 +798,206 @@ Length of str2: 11
 Concatenated string: HelloProgrammers
 Strings are not equal
 ```
+
+## Structure and Union in C-Programming
+
+**Structure:**
+
+A structure in C is a **user-defined data type** that groups different data types under a single name.
+It is useful for representing a record (e.g., student info, employee data).
+
+**Syntax:**
+
+```c
+struct structure_name 
+{
+    data_type member1;
+    data_type member2;
+    ...
+};
+```
+
+**structure_name:**  
+It is the name given by the user to the structure. Example: student, teacher, etc.
+**Data-type:**
+This gives the info about the type of data that each member of structure holds. Example: **int** for id, **float** for salary and so on.
+**member:**  
+These are the various information about the user-defined structure and each member have their own data type.
+Example: A student have his/her **name, roll no, class**, etc. so these are the member of **student** structure.
+
+**Structure decleartion:**
+
+Below example shows us that the structure name is student with its members **id** and **name**. And decleared the structure **s** as its variable which can store details of 2 students.
+
+```c
+struct student
+{
+    int id;
+    char name[20];
+}s[2];
+```
+
+**Sturcture initilization:**
+
+Structure initilization is the process of adding data to the structure member. This is done inside main() function.
+
+```c
+int main()
+{
+    int i;
+    struct student s1 = {1, "Santosh", 89.5};  // Initialization
+    for(i=0;i<=2;i++)
+    {
+        scanf("%d%s",&s[i].id,&s[i].name); // Taking input from user
+    }
+}
+```
+
+**Nested Structure:**
+
+Including one structure inside another structure is called nested structure. This is done if two or more structure are inter-related.
+
+**Syntax:**
+
+```c
+#include <stdio.h>
+
+struct struct1
+{
+    data_type first;
+    data_type second;
+    ...
+};
+
+struct struct2
+{
+    data_type third;
+    data_type fourth;
+    ...
+    struct struct1 s1; // structure 1 nested inside structure 2
+}s2;
+
+// Accessing the member is done this way: 
+// 
+// s2.third, s2.s1.first, s2.s1.fourth
+// 
+// when nested structure is used.
+```
+
+**Example:**
+
+```c
+#include <stdio.h>
+
+struct Address {
+    char city[20];
+    int pincode;
+};
+
+struct Student {
+    int roll;
+    char name[20];
+    struct Address A;   // Nested structure
+};
+
+int main() {
+    struct Student s1 = {101, "Santosh", {"Pokhara", 45600}};
+    printf("Name: %s\nCity: %s\nPincode: %d", s1.name, s1.A.city, s1.A.pincode);
+    return 0;
+}
+
+```
+
+### Array within structure
+
+Array can be decleared as the member of the sturucture. We can access those array like we access non-array members. We use array in structure while working with string value like names, address, etc.
+
+**Example:**
+
+Here, **name** and **address** are the array as member of structure **Student** with space allocated 20 and 30 bytes.
+
+```c
+struct Student {
+    int roll;
+    char name[20];
+    char address[30];
+};
+```
+
+### Passing structure or member of structure to the function
+
+In function we can pass the **member** or the whole **structure**. Where it can be passed by two ways listed below with example:
+
+**Pass By Value:**
+
+When passing parameter to the function we include actural variable or value in function call.
+
+```c
+#include <stdio.h>
+void result(int);
+struct value {
+    int x, y;
+};
+
+int main()
+{
+    struct value p1 = {10, 20};
+    result(p1);   // Passing structure by value
+    return 0;
+}
+
+void result(struct value p)  // Catching the value passed by p1 by p
+{
+    printf("x = %d, y = %d\n", p.x, p.y);
+}
+```
+
+**Pass By Reference:**
+
+When passing parameter to the function we pass **pointer** instead of actual variable or value in function call.
+**Pointer:** It is a variable that contains the address of another variable which store the actual value. So, pointer is also called **reference** to another variable.
+
+```c
+#include <stdio.h>
+void result(int);
+struct value {
+    int x, y;
+};
+
+int main()
+{
+    struct value p1 = {10, 20};
+    result(&p1);   // Passing structure by reference
+    printf("x = %d, y = %d\n", p1.x, p1.y);
+    return 0;
+}
+
+void result(struct value *p)  // decleared pointer "p" to catch address of "p1"
+{
+    p->x = 100; // sets the x member of the structure to 100
+    p->y = 200; // sets the y member of the structure to 200
+}
+```
+
+### Size of structure
+
+This gives us the information about, how much size does an structure of union occupy in the memory. It is determined using **sizeof(structure_variable)** function. Concept of **padding** is related to this part.
+
+**Padding:** Padding in C refers to the extra bytes added by the compiler inside a structure (or union) to align data in memory according to the CPU’s word boundary requirements. Below is the guidelines to use various datatype to eliminate memory allocation issue.
+
+- **int** occupy 4 bytes so the space given to any variable with this data type should be divisible by 4.
+
+- **short** occupy 2 bytes so the space given to any variable with this data type should be divisible by 2.
+
+- **double** occupy 8 bytes so the space given to any variable with this data type should be divisible by 8.
+
+- **char** occupy 1 byte so the space given to any variable with this data type should be divisible by 1.
+
+If not aligned, the CPU may need **multiple memory accesses**, slowing down execution.
+
+## Union
+
+A union is similar to a structure, but in union **all members share the same memory location**.
+
+- Only one member can be used at a time.
+- Memory allocated = size of largest memory occuping member.
