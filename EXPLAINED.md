@@ -997,9 +997,158 @@ This gives us the information about, how much size does an structure of union oc
 
 If not aligned, the CPU may need **multiple memory accesses**, slowing down execution.
 
+### Examples of padding
+
+No padding case:
+
+```c
+struct A
+{
+    int a;   // 4 byte
+    char c;    // 1 bytes remaining 3
+};
+// size = 8 bytes due to adding 3 byte as padding to total byte 4+1 = 5 bytes.
+
+```
+
+**Memory Box output:**
+
+```c
+
+| i i i i || c _ _ _| // better than shown below due to no gap in between.
+
+```
+
+**Padding case:**
+
+Extra spaces are added to improve the memory access speed, and make suitable space allocation. Below is the good practice and bad practice example. Which we should use if it is sure their will be padding.
+
+- Good practice:
+  
+```c
+// Good (less padding)
+struct Good
+{
+    char c;
+    char d;
+    int i;
+};
+// size = 8 bytes
+```
+
+**Memory Box output:**
+
+```c
+
+| c d _ _|| i i i i | // two space remaining
+
+```
+
+- Bad practice:
+
+```c
+// Bad (with padding)
+struct Bad {
+    char c;
+    int i;
+    char d;
+};
+// size = 12 bytes
+
+```
+
+**Memory Box output:**
+
+```c
+
+| c _ _ _|| i i i i || d _ _ _| // 6 space remaining
+
+```
+
+## Pragma pack
+
+Using pragma pack helps to use every space without padding but it slows the speed of processing due to delay in memory access. It is compiler-specific.
+
+```c
+#pragma pack(1)
+struct Packed
+{
+    char c;
+    int i;
+};
+#pragma pack()
+
+```
+
+**Memory Box Output:**
+
+```c
+
+| c || i i i i | // left no space without pragma pack size = 8 bytes but with pragma pack size = 5 bytes.
+
+```
+
 ## Union
 
-A union is similar to a structure, but in union **all members share the same memory location**.
+A union is similar to a structure, but in union **all members share the same memory location** and we use keyword **union** to declare it. This is suitable if we don't have enough memory to provide seperate memory space to each member.
 
-- Only one member can be used at a time.
+- Only one member can be used/accessed at a time.
 - Memory allocated = size of largest memory occuping member.
+
+**Decleration of Union:**
+Below is the syntax about how we declear the union.
+
+**Syntax:**
+
+```c
+union union_name
+{
+    data_type member1;
+    data_type member2;
+    ...
+};
+
+```
+
+**Example:**
+
+```c
+#include <stdio.h>
+
+union Data
+{
+    int i;
+    float f;
+    char str[20];
+};
+
+int main()
+{
+    union Data d;
+    d.i = 10;
+    printf("i = %d\n", d.i);
+
+    d.f = 22.5;   // Overwrites previous value
+    printf("f = %.2f\n", d.f); // to print only 2 digits after decimal.
+
+    return 0;
+}
+```
+
+## Pointers
+
+- Introduction
+- Use of pointers
+- Pointer variable
+- Pointer decleration
+- Pointer initilization
+- Double pointer
+- Void pointer
+- Memory allocation (static, dynamic)
+- Memory allocation functions
+
+## File Handling (Data Files Handling)
+
+- Introduction
+- File pointer
+- File operating modes (read, write, append, read + write, append + read, write + append)
