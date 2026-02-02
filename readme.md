@@ -16,9 +16,9 @@ Collection of example projects, snippets, and small demos for learning and refer
 
 ## Repository layout
 Suggested structure:
-- /c/ — C examples, makefiles, tests  
-- /php/ — PHP scripts, minimal apps  
-- /web/ — HTML, CSS, JavaScript projects (each project in its own folder)  
+- /c/ — C examples and important theroy
+- /php/ — PHP scripts 
+- /web/ — HTML, CSS, JavaScript projects 
 - /docs/ — documentation, notes  
 - README.md — this file  
 - LICENSE
@@ -26,8 +26,8 @@ Suggested structure:
 ## Getting started
 Requirements (examples):
 - C: gcc/clang, make  
-- PHP: PHP 7.4+ (CLI/webserver)  
-- Web: modern browser; node/npm for tooling (optional)
+- PHP: PHP 7.4+ (CLI/webserver), xampp control panel
+- Web: modern browser like google chrome, brave, etc.
 
 Quick start:
 - Clone: git clone <repo-url>
