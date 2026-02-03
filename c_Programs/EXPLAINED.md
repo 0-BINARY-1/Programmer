@@ -1135,20 +1135,416 @@ int main()
 }
 ```
 
-## Pointers
+# Pointers and Memory Allocation
 
-- Introduction
-- Use of pointers
-- Pointer variable
-- Pointer decleration
-- Pointer initilization
-- Double pointer
-- Void pointer
-- Memory allocation (static, dynamic)
-- Memory allocation functions
+## 1. Introduction to Pointers
 
-## File Handling (Data Files Handling)
+A **pointer** is a variable that stores the **memory address** of another variable.
 
-- Introduction
-- File pointer
-- File operating modes (read, write, append, read + write, append + read, write + append)
+- Instead of holding a value, it holds an address.
+- Helps in dynamic memory management by allowing programs to request memory only when needed and free it after use finished. Suitable for array stirings and functions
+- Improves performance by sharing the same block of data with the multiple users instead of giving seperate file of same data to multiple users.
+
+---
+
+## 2. Use of Pointers
+Pointers are used to:
+
+- Access and modify variables indirectly
+- Handle arrays and strings efficiently
+- Enable dynamic memory allocation
+- Pass arguments by reference to functions
+- Create complex data structures (linked lists, trees, graphs)
+
+---
+
+## 3. Pointer Variable
+A pointer variable stores the address of another variable.
+
+Example:
+```c
+int a = 10;
+int *p;
+p = &a;
+```
+
+- `a` → normal variable  i.e 10
+- `&a` → address of `a`  i.e 2323
+- `p` → pointer storing address of `a` i.e p = 2323
+
+---
+
+## 4. Pointer Declaration
+Syntax:
+```c
+data_type *pointer_name;
+```
+
+Examples:
+```c
+int *p;
+float *fp;
+char *cp;
+```
+
+---
+
+## 5. Pointer Initialization
+Assigning an address to a pointer.
+
+```c
+int a = 5;
+int *p = &a;
+```
+
+Best practice: initialize pointers with **NULL** to avoid garbage values.
+```c
+int *p = NULL;
+```
+
+---
+
+## 6. Double Pointer
+A pointer that stores the address of another pointer.
+
+```c
+int a = 10;
+int *p = &a;
+int **pp = &p;
+```
+
+- `p` → address of `a`
+- `pp` → address of `p`
+
+Used in:
+- Dynamic 2D arrays
+- Modifying pointers in functions
+
+---
+
+## 7. Void Pointer
+A generic pointer that can **hold address of any data type**. When a pointer does not have a specific datatype.
+
+```c
+void *vp;
+int a = 5;
+vp = &a;
+```
+
+- Must be typecast before dereferencing: We have to convert it to represent a datatype before accessing the values it points to.
+
+```c
+printf("%d", *(int*)vp); 
+```
+Above it is being converted to integer data type
+---
+
+# Memory Allocation
+
+## 8. Static Memory Allocation
+Memory is allocated at **compile time**.
+
+Example:
+```c
+int a = 10;
+int arr[10];
+```
+
+### Features
+- Fixed size
+- Faster access
+- Cannot be resized
+- Stored in stack or data segment
+
+---
+
+## 9. Dynamic Memory Allocation
+Memory allocated at **runtime** using heap.
+
+Advantages:
+- Flexible size
+- Efficient memory usage
+- Controlled by programmer
+
+---
+
+### About heap memory
+
+Heap memory is a region of RAM used for dynamic memory allocation at runtime.
+- Memory is allocated and freed by the programmer.
+- Managed using pointers.
+- Allocation happens during program execution (not compile time).
+
+**Heap is useful when:**
+
+- Data size is unknown at compile time
+- You need large memory blocks
+- Data must persist beyond function scope
+- Building dynamic structures (linked lists, trees, graphs)
+
+## 10. Memory Allocation Functions
+Defined in `<stdlib.h>`
+
+### (a) malloc()
+Allocates memory but does not initialize.
+
+```c
+int *p = (int*)malloc(sizeof(int));
+```
+
+---
+
+### (b) calloc()
+Allocates memory and initializes to zero.
+
+```c
+int *p = (int*)calloc(5, sizeof(int));
+```
+
+---
+
+### (c) realloc()
+Resizes previously allocated memory.
+
+```c
+p = (int*)realloc(p, 10 * sizeof(int));
+```
+
+---
+
+### (d) free()
+Deallocates memory.
+
+```c
+free(p);
+```
+
+---
+
+# Important Points to Remember
+
+- Always initialize pointers
+- Avoid dereferencing NULL or wild pointers
+- Free dynamically allocated memory to prevent **memory leaks**
+- Use `sizeof()` for portability
+- Dangling pointer: pointer pointing to freed memory
+
+---
+
+# Simple Example
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *p = (int*)malloc(sizeof(int));// Allocated the memory to the pointer
+    *p = 25; // initilized the pointer
+
+    printf("%d", *p); // Used the pointer for required action.
+
+    free(p); // De-allocated the memory from pointer.
+    return 0;
+}
+```
+
+---
+
+# Quick Summary
+
+- Pointer = stores address  
+- `*` → dereference operator
+- `&` → address-of  
+- Static memory allocation  = compile time memory allocation
+- Dynamic memory allocation = runtime memory allocation  
+
+
+# File Handling (Data Files Handling in C)
+
+## Introduction
+
+**File handling** in C allows programs to store and retrieve data from
+files on secondary storage (HDD/SSD). Unlike variables (temporary
+storage), files provide **permanent storage**.
+
+### Uses
+
+-   Saving user data
+-   Storing results
+-   Handling large data
+-   Logging information
+
+C file handling functions are available in:
+
+``` c
+#include <stdio.h>
+```
+
+### Basic Steps
+
+1.  Open a file
+2.  Perform operations (read/write)
+3.  Close the file
+
+------------------------------------------------------------------------
+
+## File Pointer
+
+A **file pointer** is used to access and manage files.
+
+### Declaration
+
+``` c
+FILE *fp;
+```
+
+### Example
+
+``` c
+FILE *fp;
+fp = fopen("data.txt", "r");
+```
+
+-   `FILE` is a structure in `stdio.h`
+-   `fp` holds file address
+-   `fopen()` returns `NULL` if file open fails
+
+### Safe Check
+
+``` c
+if (fp == NULL) {
+    printf("File not found!");
+}
+```
+
+------------------------------------------------------------------------
+
+## File Opening Syntax
+
+``` c
+FILE *fp;
+fp = fopen("filename", "mode");
+```
+
+Example:
+
+``` c
+fp = fopen("marks.txt", "w");
+```
+
+------------------------------------------------------------------------
+
+## File Operating Modes
+
+### Read (`r`)
+
+-   Opens file for reading\
+-   File must exist
+
+``` c
+fp = fopen("data.txt", "r");
+```
+
+------------------------------------------------------------------------
+
+### Write (`w`)
+
+-   Creates new file\
+-   Overwrites existing file
+
+``` c
+fp = fopen("data.txt", "w");
+```
+
+------------------------------------------------------------------------
+
+### Append (`a`)
+
+-   Adds data to end\
+-   Creates file if not exists
+
+``` c
+fp = fopen("data.txt", "a");
+```
+
+------------------------------------------------------------------------
+
+### Read + Write (`r+`)
+
+-   Reading and writing allowed\
+-   File must exist\
+-   Pointer starts at beginning
+
+``` c
+fp = fopen("data.txt", "r+");
+```
+
+------------------------------------------------------------------------
+
+### Append + Read (`a+`)
+
+-   Read and append\
+-   Writing occurs at end\
+-   Creates file if missing
+
+``` c
+fp = fopen("data.txt", "a+");
+```
+
+------------------------------------------------------------------------
+
+### Write + Read (`w+`)
+
+-   Read and write allowed\
+-   Overwrites file
+
+``` c
+fp = fopen("data.txt", "w+");
+```
+
+------------------------------------------------------------------------
+
+## Basic Example Program
+
+``` c
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+
+    fp = fopen("data.txt", "w");
+
+    fprintf(fp, "Hello File!");
+
+    fclose(fp);
+
+    return 0;
+}
+```
+
+------------------------------------------------------------------------
+
+## Closing a File
+
+Always close files to save data and free memory.
+
+``` c
+fclose(fp);
+```
+
+
+------------------------------------------------------------------------
+
+
+---
+
+## Thank You
+
+Thank you for reading this guide on **File Handling in C**.
+
+If this README helped you, consider starring the repository and sharing it with others who are learning C programming.
+
+Happy Coding!
+
+---
+
