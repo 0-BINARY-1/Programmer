@@ -1,10 +1,10 @@
 Below are the questions that will be discussed in this course.
 
-1. WAP to find the sum of three input numbers.
+1. WAP to find the sum of three numbers entered by the user.
 2. WAP to find the square of a given number.
-3. WAP to calculate simple interest using Si-(P*T*R)/100.
-4. WAP to input two numbers and print remainder and quotient.
-5. WAP to input seconds and convert it into hour, minute and second.
+3. WAP to calculate simple interest using formula Si-(P*T*R)/100.
+4. WAP to input two numbers and print remainder and quotient after division.
+5. WAP to input seconds and convert it into hours, minutes and seconds.
 6. WAP to calculate the area of a rectangle.
 7. WAP to find the largest number among three numbers given by the user.
 8. WAP that reads marks of five subjects and calculates total marks & percentage.
@@ -22,7 +22,7 @@ Below are the questions that will be discussed in this course.
         123
         1234
 
-18. WAP to display the following Fibonacci series: 1 1, 2, 3, 5...... up to nth term.
+18. WAP to display the following Fibonacci series: 0,1, 1, 2, 3, 5...... up to nth term.
 19. WAP to calculate and display the sum of digits present in the given numbers.
 20. WAP to check whether the given number is palindrome or not.
 21. WAP to convert a given decimal number into a binary number.
