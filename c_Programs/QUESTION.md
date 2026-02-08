@@ -40,7 +40,7 @@ Below are the questions that will be discussed in this course.
 3. WAP to input the age of 10 students and count the number of students having age between 20 to 25.
 4. WAP to input n numbers and sort them in ascending order and decending both.
 5. WAP to store the numbers in 2-D square matrix with 9 elements, that is 3*3 matrix and print the matrix.
-6. WAP to input two 3x3 matrices, add two matrices and display the result in proper format.
+6. WAP to input two 3x3 matrices, and do arithmetic operations on those two matrices then display the result in proper format.
 7. WAP to input string from user, calculate its length and display in reversed form.
 8. WAP to copy one string into another string and concatenate
 9. WAP to compare two strings.
