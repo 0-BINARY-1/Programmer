@@ -52,11 +52,10 @@ Below are the questions that will be discussed in this course.
 2. WAP to print the sum of two numbers using all categories of user-defined functions.
 3. WAP to calculate the cumulative sum and cumulative multiplication using recursion.
 4. WAP that reads the weight of 5 students and counts the number of students having weight in between 50 to 60kg using the function.
-5. WAP that takes rollno, fname, lname and display the record on screen using structure on the basis of roll_no.
+5. WAP that takes rollno and name and display the record on screen using structure on the basis of roll_no.
 6. WAP to calculate sum of two distances and distance is measured in terms of feet and inch. using user defined datatype.
 7. WAP that takes emp_no, emp_fname, emp_Iname and date of birth and prints the record on screen using nested structure.
-8. WAP that takes rollno, frame, Iname of 5 students and prints the record in ascending order on the basis of rollno.
-9. WAP that reads name and address of different employees and rearranges them on the basis of name in alphabetical order.
+8. WAP that reads name and address of different employees and rearranges them on the basis of name in alphabetical order.
 
 # Pointer
 1. WAP to calculate the sum of two numbers using pointers.
@@ -68,7 +67,6 @@ Below are the questions that will be discussed in this course.
 2. WAP to write and read integers to/from file using getw() and putw().
 3. WAP to write and read rollno, name and percentage of 5 students to/from file using 
 fscanf() and fprintf().
-4. WAP to write and read emp_id, emp_name and emp_salary of 5 employees to/from file using fscanf() and fprintf().
-5. WAP to write and read a record to/from a data file using fwrite()/fread()
-6. WAP to write and read successive records to/from a data file using structure variables.
-7. WAP to delete and rename data files using remove and rename commands.
+4. WAP to write and read a record to/from a data file using fwrite()/fread()
+5. WAP to write and read successive records to/from a data file using structure variables.
+6. WAP to delete and rename data files using remove and rename commands.
