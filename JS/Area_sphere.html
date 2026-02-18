@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Area of Sphere</title>
+</head>
+<body>
+
+        <h2>Area of Sphere</h2>
+        <!-- Input field for radius -->
+        <input type="number" id="radius" placeholder="Enter radius of sphere">
+        <button onclick="calculateArea()">Calculate Area</button>
+
+            <p id="result"></p>
+    <script>
+        // Function to calculate area of sphere
+        function calculateArea() 
+        {
+            // Get radius from input
+            let radius = Number(document.getElementById('radius').value);
+ 
+            
+            // Calculate area using formula: 4πr²
+            let area = 4 * Math.PI * Math.pow(radius, 2);
+            
+            // Display result rounded to 2 decimal places
+            document.getElementById('result').innerHTML = `
+                Radius is: ${radius}<br>
+                Area of Sphere: ${area.toFixed(2)} square units
+            `;
+        }
+    </script>
+</body>
+</html>

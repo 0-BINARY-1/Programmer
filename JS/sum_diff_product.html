@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sum, Difference & Product</title>
+</head>
+<body>
+        <h2>Sum, Difference & Product</h2><br>
+        <!-- Input fields for two numbers -->
+        <input type="number" id="num1" placeholder="Enter first number"><br>
+        <input type="number" id="num2" placeholder="Enter second number"><br>
+        <button onclick="calculate()">Calculate</button><br>
+        <p id = "result"></p>
+
+    <script>
+        // Function to calculate sum, difference and product
+        function calculate() 
+        {
+            // Get values from input fields
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            
+            // Calculate sum, difference and product
+            let sum = num1 + num2;
+            let difference = num1 - num2;
+            let product = num1 * num2;
+            
+            // Display results and  // backtick (`) to use html inside javascript
+            document.getElementById('result').innerHTML = `First Number : ${num1} <br>
+                Second Number : ${num2} <br><br>
+                Sum : ${sum} <br>
+                Difference : ${difference} <br>
+                Product : ${product} <br>`;
+        }
+    </script>
+</body>
+</html>
