@@ -1,0 +1,20 @@
+# Treat all text files as text
+* text=auto
+
+# Force LF line endings for scripts and code
+*.c text eol=lf
+*.h text eol=lf
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+LICENSE text eol=lf
+
+# Binary files (ignore text conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary

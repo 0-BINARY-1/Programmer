@@ -1,0 +1,31 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE specific
+.idea/
+.vscode/
+*.sublime-workspace
+*.code-workspace
+
+# Compiled C programs
+*.exe
+*.out
+*.o
+*.obj
+
+# PHP / Node / Web related
+vendor/
+node_modules/
+*.log
+*.cache
+*.env
+!.env.example
+
+# Backup files
+*~
+*.swp
+*.bak
+
+# Hidden system files
+.*
