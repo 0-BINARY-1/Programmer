@@ -4,21 +4,21 @@ I have provided basic info about each and every topic you will need during this 
 
 ## 📋 Table of Contents
 
-1. [Keywords and Identifier](K&I)
-2. [Datatype](Datatype)
-3. [Pre-Processor Directives](PPD)
-4. [Compilation](Compilition)
-5. [Constants and Variables](C&V)
-6. [Operators](Operators)
-7. [Escape Key](EK)
-8. [Data Type Conversion](DTC)
-9. [Input and Output Operations](I&O)
-10. [Control Statements](CS)
-11. [Array and Strings](A&S)
-12. [Function](Function)
-13. [Pointers](Pointors)
-14. [Structure, Union](Structure&Union)
-15. [Data files](DF)
+1. [Keywords and Identifier](#keywords-and-identifier)
+2. [Datatype](#datatype)
+3. [Pre-Processor Directives](#pre-processor-directives)
+4. [Compilation](#compilation)
+5. [Constants and Variables](#constants-and-variables)
+6. [Operators](#operators)
+7. [Escape Key](#escape-key)
+8. [Data Type Conversion](#data-type-conversion)
+9. [Input and Output Operations](#input-and-output-operations)
+10. [Control Statements](#control-statements)
+11. [Array and Strings](#array-and-strings)
+12. [Function](#function)
+13. [Pointers](#pointers)
+14. [Structure, Union](#structure-union)
+15. [Data files](#data-files)
 
 ## Keywords and Identifier
 
@@ -59,7 +59,7 @@ During variables decleration we need to specify the type of data that the variab
 
 ## Pre-Processor Directives
 
-Pre-processor directives are instructions that are processed **before** the actual compilation of code.
+Pre-processor directives are instructions that are processed **before** the actual compilation of code. Let's take example of #include<stdio.h>. This will help the compiler to understand the meaning of "printf" and "scanf" used in the program.
 **Example**
 
 ```C
@@ -95,7 +95,7 @@ This is done by a program called a **compiler** (e.g., GCC, Turbo C).
    - Resolves function calls (like `printf`) to actual addresses in libraries.
    - Output: `.exe` (Windows) or executable (Linux).
 
-### Note
+**Note:**  
 
 Library files contains actual meaning of each and every words used in the program and help processor to understand the code by linking meaning and words.
 
@@ -135,12 +135,30 @@ Operators are symbols used to perform operations on variables and values.
 
 Escape sequences are special combinations of character  starting with **\** and used to give new line, tab, etc.
 
-| Sequence | Meaning      |
-| -------- | ------------ |
-| `\n`     | New line     |
-| `\t`     | Tab          |
-| `\\`     | Backslash    |
-| `\"`     | Double quote |
+### List of Escape Sequences
+
+| Escape Sequence | Description |
+|-----------------|-------------|
+| `\n`            | Newline – moves the cursor to the next line |
+| `\t`            | Horizontal tab – adds a tab space |
+| `\\`            | Backslash – prints a single backslash `\` |
+| `\'`            | Single quote – prints a single quote `'` |
+| `\"`            | Double quote – prints a double quote `"` |
+| `\r`            | Carriage return – moves the cursor to the beginning of the line |
+| `\b`            | Backspace – moves the cursor one position back |
+| `\f`            | Form feed – advances the paper feed in printers (rarely used) |
+| `\v`            | Vertical tab – vertical tab space |
+| `\a`            | Alert (bell) – produces a beep sound |
+| `\?`            | Question mark – prints `?` (used to avoid trigraphs in C) |
+| `\0`            | Null character – represents the end of a string |
+
+**Note:**  
+
+- Escape sequences are **case-sensitive**. For example, `\n` works but `\N` does not.
+- Some sequences like `\f` and `\v` are rarely used in modern programs.
+- Numeric escape sequences can also be used:
+  - `\xhh` – hexadecimal representation (e.g., `\x41` = `A`)
+  - `\ooo` – octal representation (e.g., `\101` = `A`)
 
 ## Data Type Conversion
 
@@ -405,7 +423,7 @@ int add(int a, int b)
 /* This will add a and b and then return the sum to the point of it's call.*/
 ```
 
-## Summery
+### Summery
 
 | **Statement Type** | **Keyword(s)**                        | **Purpose**                         | **Example**        |
 | ------------------ | ------------------------------------- | ----------------------------------- | ------------------ |
@@ -457,13 +475,14 @@ float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 
 ```
 
-## Key Features of Arrays
+**Key Features of Arrays: **
+
 
 - Each element is accessed using an **index** (index starts from `0`).
 - We can use **iteration** using loops to insert and access the values.
 - Array can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
 
-## Types of Arrays
+**Types of Arrays: **
 
 | **Type**         | **Description**                          | **Example**      |
 |------------------|----------------------------------------|------------------|
@@ -471,7 +490,7 @@ float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 | **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
 | **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
 
-## One-Dimensional (1D) Array
+### One-Dimensional (1D) Array
 
 Stores data in single **row**. If we start dealing with column than it is 2D matrix.
 
@@ -518,7 +537,7 @@ arr[3] = 4
 arr[4] = 5
 ```
 
-## Two-Dimensional (2D) Array
+### Two-Dimensional (2D) Array
 
 A 2D array is used to store data in **rows and columns** like a **table** or **matrix**.  
 
@@ -565,7 +584,7 @@ int main()
 4 5 6
 ```
 
-## Multi-Dimensional Array
+### Multi-Dimensional Array
 
 A multi-dimensional array has **more than two dimensions**.
 
@@ -803,7 +822,7 @@ Strings are not equal
 
 ## Structure and Union in C-Programming
 
-**Structure:**
+## Structure
 
 A structure in C is a **user-defined data type** that groups different data types under a single name.
 It is useful for representing a record (e.g., student info, employee data).
@@ -1065,7 +1084,7 @@ struct Bad {
 
 ```
 
-## Pragma pack
+**Pragma pack:**
 
 Using pragma pack helps to use every space without padding but it slows the speed of processing due to delay in memory access. It is compiler-specific.
 
@@ -1088,7 +1107,7 @@ struct Packed
 
 ```
 
-## Union
+### Union
 
 A union is similar to a structure, but in union **all members share the same memory location** and we use keyword **union** to declare it. This is suitable if we don't have enough memory to provide seperate memory space to each member.
 
@@ -1135,9 +1154,9 @@ int main()
 }
 ```
 
-# Pointers and Memory Allocation
+## Pointers and Memory Allocation
 
-## 1. Introduction to Pointers
+### 1. Introduction to Pointers
 
 A **pointer** is a variable that stores the **memory address** of another variable.
 
@@ -1147,7 +1166,7 @@ A **pointer** is a variable that stores the **memory address** of another variab
 
 ---
 
-## 2. Use of Pointers
+### 2. Use of Pointers
 Pointers are used to:
 
 - Access and modify variables indirectly
@@ -1158,7 +1177,7 @@ Pointers are used to:
 
 ---
 
-## 3. Pointer Variable
+### 3. Pointer Variable
 A pointer variable stores the address of another variable.
 
 Example:
@@ -1174,7 +1193,7 @@ p = &a;
 
 ---
 
-## 4. Pointer Declaration
+### 4. Pointer Declaration
 Syntax:
 ```c
 data_type *pointer_name;
@@ -1204,7 +1223,7 @@ int *p = NULL;
 
 ---
 
-## 6. Double Pointer
+### 6. Double Pointer
 A pointer that stores the address of another pointer.
 
 ```c
@@ -1222,7 +1241,7 @@ Used in:
 
 ---
 
-## 7. Void Pointer
+### 7. Void Pointer
 A generic pointer that can **hold address of any data type**. When a pointer does not have a specific datatype.
 
 ```c
@@ -1239,9 +1258,9 @@ printf("%d", *(int*)vp);
 Above it is being converted to integer data type
 ---
 
-# Memory Allocation
-
-## 8. Static Memory Allocation
+### Memory Allocation
+Different type of memory allocation ways are discussed below:
+### 8. Static Memory Allocation
 Memory is allocated at **compile time**.
 
 Example:
@@ -1250,7 +1269,7 @@ int a = 10;
 int arr[10];
 ```
 
-### Features
+**Features:**
 - Fixed size
 - Faster access
 - Cannot be resized
@@ -1258,7 +1277,7 @@ int arr[10];
 
 ---
 
-## 9. Dynamic Memory Allocation
+### 9. Dynamic Memory Allocation
 Memory allocated at **runtime** using heap.
 
 Advantages:
@@ -1282,10 +1301,10 @@ Heap memory is a region of RAM used for dynamic memory allocation at runtime.
 - Data must persist beyond function scope
 - Building dynamic structures (linked lists, trees, graphs)
 
-## 10. Memory Allocation Functions
+### 10. Memory Allocation Functions
 Defined in `<stdlib.h>`
 
-### (a) malloc()
+**(a) malloc():**
 Allocates memory but does not initialize.
 
 ```c
@@ -1294,7 +1313,7 @@ int *p = (int*)malloc(sizeof(int));
 
 ---
 
-### (b) calloc()
+**(b) calloc():**
 Allocates memory and initializes to zero.
 
 ```c
@@ -1303,7 +1322,7 @@ int *p = (int*)calloc(5, sizeof(int));
 
 ---
 
-### (c) realloc()
+**(c) realloc():**
 Resizes previously allocated memory.
 
 ```c
@@ -1312,7 +1331,7 @@ p = (int*)realloc(p, 10 * sizeof(int));
 
 ---
 
-### (d) free()
+**(d) free():**
 Deallocates memory.
 
 ```c
@@ -1321,7 +1340,7 @@ free(p);
 
 ---
 
-# Important Points to Remember
+### Important Points to Remember
 
 - Always initialize pointers
 - Avoid dereferencing NULL or wild pointers
@@ -1331,7 +1350,7 @@ free(p);
 
 ---
 
-# Simple Example
+**Simple Example:**
 
 ```c
 #include <stdio.h>
@@ -1350,7 +1369,7 @@ int main() {
 
 ---
 
-# Quick Summary
+**Quick Summary:**
 
 - Pointer = stores address  
 - `*` → dereference operator
@@ -1359,15 +1378,15 @@ int main() {
 - Dynamic memory allocation = runtime memory allocation  
 
 
-# File Handling (Data Files Handling in C)
+## File Handling (Data Files Handling in C)
 
-## Introduction
+### Introduction
 
 **File handling** in C allows programs to store and retrieve data from
 files on secondary storage (HDD/SSD). Unlike variables (temporary
 storage), files provide **permanent storage**.
 
-### Uses
+**Uses:**
 
 -   Saving user data
 -   Storing results
@@ -1380,7 +1399,7 @@ C file handling functions are available in:
 #include <stdio.h>
 ```
 
-### Basic Steps
+**Basic Steps:**
 
 1.  Open a file
 2.  Perform operations (read/write)
@@ -1388,17 +1407,17 @@ C file handling functions are available in:
 
 ------------------------------------------------------------------------
 
-## File Pointer
+**File Pointer:**
 
 A **file pointer** is used to access and manage files.
 
-### Declaration
+**Declaration:**
 
 ``` c
 FILE *fp;
 ```
 
-### Example
+**Example:**
 
 ``` c
 FILE *fp;
@@ -1409,7 +1428,7 @@ fp = fopen("data.txt", "r");
 -   `fp` holds file address
 -   `fopen()` returns `NULL` if file open fails
 
-### Safe Check
+**Safe Check:**
 
 ``` c
 if (fp == NULL) {
@@ -1419,7 +1438,7 @@ if (fp == NULL) {
 
 ------------------------------------------------------------------------
 
-## File Opening Syntax
+**File Opening Syntax:**
 
 ``` c
 FILE *fp;
@@ -1434,9 +1453,9 @@ fp = fopen("marks.txt", "w");
 
 ------------------------------------------------------------------------
 
-## File Operating Modes
+### File Operating Modes
 
-### Read (`r`)
+**Read (`r`):**
 
 -   Opens file for reading\
 -   File must exist
@@ -1447,7 +1466,7 @@ fp = fopen("data.txt", "r");
 
 ------------------------------------------------------------------------
 
-### Write (`w`)
+**Write (`w`):**
 
 -   Creates new file\
 -   Overwrites existing file
@@ -1458,7 +1477,7 @@ fp = fopen("data.txt", "w");
 
 ------------------------------------------------------------------------
 
-### Append (`a`)
+**Append (`a`):**
 
 -   Adds data to end\
 -   Creates file if not exists
@@ -1469,7 +1488,7 @@ fp = fopen("data.txt", "a");
 
 ------------------------------------------------------------------------
 
-### Read + Write (`r+`)
+**Read + Write (`r+`):**
 
 -   Reading and writing allowed\
 -   File must exist\
@@ -1481,7 +1500,7 @@ fp = fopen("data.txt", "r+");
 
 ------------------------------------------------------------------------
 
-### Append + Read (`a+`)
+**Append + Read (`a+`):**
 
 -   Read and append\
 -   Writing occurs at end\
@@ -1493,7 +1512,7 @@ fp = fopen("data.txt", "a+");
 
 ------------------------------------------------------------------------
 
-### Write + Read (`w+`)
+**Write + Read (`w+`):**
 
 -   Read and write allowed\
 -   Overwrites file
@@ -1504,7 +1523,7 @@ fp = fopen("data.txt", "w+");
 
 ------------------------------------------------------------------------
 
-## Basic Example Program
+**Basic Example Program:**
 
 ``` c
 #include <stdio.h>
@@ -1524,7 +1543,7 @@ int main() {
 
 ------------------------------------------------------------------------
 
-## Closing a File
+**Closing a File:**
 
 Always close files to save data and free memory.
 
@@ -1540,7 +1559,7 @@ fclose(fp);
 
 ## Thank You
 
-Thank you for reading this guide on **File Handling in C**.
+Thank you for reading this guide on **C Programming**.
 
 If this README helped you, consider starring the repository and sharing it with others who are learning C programming.
 
