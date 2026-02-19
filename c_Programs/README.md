@@ -23,15 +23,23 @@ C is a powerful, general-purpose programming language:
     c. Pointer 
     d. File handling and file pointer
 
-3. Simple application development like:
+3. Simple application that can be developed are like:
 
     a. Calculator
     b. Quiz game
 
+4. Complex systems that can be developed are like:
+
+   a. Operating Systems (e.g., Linux)
+   b. Database Management Systems (e.g., MySQL)
+   c. Compilers (e.g., GCC)
+   d. Web Servers (e.g., Nginx)
+   e. Game Engines (e.g., Doom engine)
+
+
 
 **Note:
 
-- There will be code only of various question listed and explained in  QUESTION.md file. 
+- There will be code only of the questions listed in  QUESTION.md file. 
 - Explanation of each topic listed above in EXPLAINED.md file.
-- Seperate folder for all three section with name "Basic", "Medium_Advance" and "Real Life Implementation"
-
+- Seperate folder for different types of questions are created.
