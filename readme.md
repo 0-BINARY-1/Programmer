@@ -14,35 +14,35 @@ Collection of program questions, program solutions, and their explanation regard
 Suggested structure:
 - /Programmer  
   - /CSS
-   - CSS_programs_all (folder)  
-   - CSS_explained.md
-   - CSS_questions.md
-   - README.md
+     1. CSS_programs_all (folder)
+     2. CSS_explained.md
+     3. CSS_questions.md
+     4. README.md
   - /HTML
-   - HTML_programs_all (folder)  
-   - HTML_explained.md
-   - HTML_questions.md
-   - README.md
+     1. HTML_programs_all (folder)  
+     2. HTML_explained.md
+     3. HTML_questions.md
+     4. README.md
   - /JS
-   - JS_programs_all (folder)  
-   - JS_explained.md
-   - JS_questions.md
-   - README.md
+     1. JS_programs_all (folder)  
+     2. JS_explained.md
+     3. JS_questions.md
+     4. README.md
   - /PHP_Programs
-   - PHP_programs_all (folder)  
-   - PHP_explained.md
-   - PHP_questions.md
-   - README.md
+     1. PHP_programs_all (folder)  
+     2. PHP_explained.md
+     3. PHP_questions.md
+     4. README.md
   - /c_Programs  
-    - Array_Matrix_String (folder)  
-    - Basic_Programs (folder)  
-    - File_Handling (folder)  
-    - Function_Structure (folder)  
-    - Pointer (folder)  
-    - Series_and_Conversion (folder)  
-    - C_EXPLAINED.md
-    - C_QUESTION.md
-    - README.md
+    1. Array_Matrix_String (folder)  
+    2. Basic_Programs (folder)  
+    3. File_Handling (folder)  
+    4. Function_Structure (folder)  
+    5. Pointer (folder)  
+    6. Series_and_Conversion (folder)  
+    7. C_EXPLAINED.md
+    8. C_QUESTION.md
+    9. README.md
   - readme.md — this file
   - .gitignore
   - .gitattributes
