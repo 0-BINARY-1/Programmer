@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email and Phone Validation</title>
+</head>
+<body>
+
+<h2>Simple Form Validation</h2>
+
+<form id="myForm" onsubmit="return checkData()">
+
+    <!-- Email Input -->
+    <label>Email:</label><br>
+    <input type="text" id="email"><br><br>
+
+    <!-- Phone Input -->
+    <label>Phone Number:</label><br>
+    <input type="text" id="phone"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+
+function checkData() 
+{
+
+    // Get values
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+
+    // Email pattern (standard email format)
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Phone pattern (for 10 digits numbers only)
+    var phonePattern = /^[0-9]{10}$/;
+
+    // Validating Email
+    if (!emailPattern.test(email)) 
+    {
+        alert("Invalid Email Format");
+        return false;
+    }
+
+    // Validate Phone
+    if (!phonePattern.test(phone)) 
+    {
+        alert("Phone number must be 10 digits");
+        return false;
+    }
+
+    alert("Form Submitted Successfully!");
+    return true;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h2>Simple Calculator</h2>
+
+<table border="1" cellpadding="10">
+
+    <!-- Display Row -->
+    <tr>
+        <td colspan="4">
+            <input type="text" id="display">
+        </td>
+    </tr>
+
+    <!-- Row 1 -->
+    <tr>
+        <td><button onclick="addValue('7')">7</button></td>
+        <td><button onclick="addValue('8')">8</button></td>
+        <td><button onclick="addValue('9')">9</button></td>
+        <td><button onclick="addValue('+')">+</button></td>
+    </tr>
+
+    <!-- Row 2 -->
+    <tr>
+        <td><button onclick="addValue('4')">4</button></td>
+        <td><button onclick="addValue('5')">5</button></td>
+        <td><button onclick="addValue('6')">6</button></td>
+        <td><button onclick="addValue('-')">-</button></td>
+    </tr>
+
+    <!-- Row 3 -->
+    <tr>
+        <td><button onclick="addValue('1')">1</button></td>
+        <td><button onclick="addValue('2')">2</button></td>
+        <td><button onclick="addValue('3')">3</button></td>
+        <td><button onclick="addValue('*')">*</button></td>
+    </tr>
+
+    <!-- Row 4 -->
+    <tr>
+        <td><button onclick="addValue('0')">0</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        <td><button onclick="addValue('/')">/</button></td>
+        <td><button onclick="reset()">C</button></td>
+    </tr>
+
+</table>
+ <script>
+
+        // Function to add numbers/operators to display
+        function addValue(value) 
+        {
+            document.getElementById("display").value += value;
+        }
+
+        // Function to calculate result
+        function calculate() 
+        {
+            var exp = document.getElementById("display").value;
+            var result = eval(exp);
+            document.getElementById("display").value = result;
+        }
+
+        // Function to clear display
+        function reset() 
+        {
+            document.getElementById("display").value = "";
+        }
+
+</script>
+</body>
+</html>

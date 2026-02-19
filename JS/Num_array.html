@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Numbers Using Loop</title>
+</head>
+<body>
+
+<h2>Enter 3 Numbers</h2>
+
+Number 1: <input type="number" id="num1"><br><br>
+Number 2: <input type="number" id="num2"><br><br>
+Number 3: <input type="number" id="num3"><br><br>
+
+<button onclick="readNumbers()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function readNumbers() 
+{
+
+    var numbers = [];
+
+    // Loop to read and store numbers
+    for (var i = 1; i <= 3; i++) 
+    {
+
+        var value = document.getElementById("num" + i).value;
+        numbers.push(value);   // push stores the value automatically at the end of the array
+    }
+
+    // Display the numbers
+    document.getElementById("result").innerHTML =
+        "You entered: <br> " + numbers + "<br>";
+}
+
+</script>
+
+</body>
+</html>
