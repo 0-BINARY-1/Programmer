@@ -16,7 +16,7 @@ I have provided basic info about each and every topic you will need during this 
 10. [Control Statements](#control-statements)
 11. [Array in C Programming](#array-in-C-Programming)
 12. [String in C Programming](#string-in-c-programming)
-13. [Function in C](#function-in-c)
+13. [Functions in C](#functions-in-c)
 14. [Structure in C Programming](#structure-in-c-programming)
 15. [Union in C Programming](#union-in-c-programming)
 16. [Pointers and Memory Allocation](#pointers-and-memory-allocation)
@@ -885,10 +885,13 @@ These are functions created by the programmer to perform specific tasks.
 
 **Types of User-Defined Functions Based on Parameters and Return Type:**
 
-Type 1: No parameter, no return value	Function does not take any input and does not return anything	void greet() { printf("Hello\n"); }
-Type 2: No parameter, returns value	Function does not take input but returns a value	int getNumber() { return 5; }
-Type 3: Parameter(s), no return value	Function takes input but does not return anything	void printSquare(int x) { printf("%d", x*x); }
-Type 4: Parameter(s), returns value	Function takes input and returns a value	int square(int x) { return x*x; }
+| Function Type                        | Description                                         | Example Usage                                  |
+| ------------------------------------ | --------------------------------------------------- | ---------------------------------------------- |
+| Type 1: No parameter, no return value | Function does not take any input and does not return anything | `void greet() { printf("Hello\n"); }`|
+| Type 2: No parameter, returns value   | Function does not take input but returns a value   | `int getNumber() { return 5; }`               |
+| Type 3: Parameter(s), no return value | Function takes input but does not return anything | `void printSquare(int x) { printf("%d", x*x); }`|
+| Type 4: Parameter(s), returns value   | Function takes input and returns a value           | `int square(int x) { return x*x; }`           |
+
 
 **Type 1:**
 ```c
@@ -974,11 +977,11 @@ struct structure_name
 };
 ```
 
-**structure_name:**  
-It is the name given by the user to the structure. Example: student, teacher, etc.
+**Structure_name:**  
+It is the name given by the user to the structure. Example: student, teacher, etc.  
 **Data-type:**
-This gives the info about the type of data that each member of structure holds. Example: **int** for id, **float** for salary and so on.
-**member:**  
+This gives the info about the type of data that each member of structure holds. Example: **int** for id, **float** for salary and so on.  
+**Structure_member:**  
 These are the various information about the user-defined structure and each member have their own data type.
 Example: A student have his/her **name, roll no, class**, etc. so these are the member of **student** structure.
 
