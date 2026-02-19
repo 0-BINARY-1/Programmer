@@ -14,11 +14,13 @@ I have provided basic info about each and every topic you will need during this 
 8. [Data Type Conversion](#data-type-conversion)
 9. [Input and Output Operations](#input-and-output-operations)
 10. [Control Statements](#control-statements)
-11. [Array and Strings](#array-and-strings)
-12. [Function](#function)
-13. [Pointers](#pointers)
-14. [Structure, Union](#structure-union)
-15. [Data files](#data-files)
+11. [Array in C Programming](#array-in-C-Programming)
+12. [String in C Programming](#string-in-c-programming)
+13. [Function in C](#function-in-c)
+14. [Structure in C Programming](#structure-in-c-programming)
+15. [Union in C Programming](#union-in-c-programming)
+16. [Pointers and Memory Allocation](#pointers-and-memory-allocation)
+17. [File Handling in C Programming](#file-handling-in-c-programming)
 
 ## Keywords and Identifier
 
@@ -131,7 +133,7 @@ Operators are symbols used to perform operations on variables and values.
 
 **Logical**: &nbsp;&nbsp; &&&nbsp;, ||&nbsp;, !
 
-## Escape Sequence
+## Escape Key
 
 Escape sequences are special combinations of character  starting with **\** and used to give new line, tab, etc.
 
@@ -186,7 +188,7 @@ scanf() → Input data.
 
 **scanf**("%d", &num);  
 
-## Control Statements in C
+## Control Statements
 
 Control statements are used to **control the flow of execution** in a program based on certain conditions. They are divided into three main categories:
 
@@ -820,7 +822,141 @@ Concatenated string: HelloProgrammers
 Strings are not equal
 ```
 
-## Structure and Union in C-Programming
+## Functions in C
+
+In C programming, a **function** is a block of code that performs a specific task. Functions help in **modular programming**, improve code readability, and allow **code reuse**.
+
+A function is a self-contained piece of code that:
+
+- Performs a specific task
+- Can take input (parameters)
+- May return a value
+
+**Basic Syntax:**
+
+```c
+return_type function_name(parameter_list) {
+    // body of the function
+    // statements
+    return value; // if return_type is not void
+}
+```
+
+**Example:**
+```c
+#include <stdio.h>
+
+int main()
+{
+    int sum = add(5, 3);
+    printf("Sum = %d", sum);
+    return 0;
+}
+
+// Function definition
+int add(int a, int b)
+{
+    return a + b;
+}
+
+```
+
+### Types of Functions in C
+
+Functions in C are categorized into two main types:
+
+   a. Library Functions (Predefined)
+   b. User-Defined Functions
+
+**Library (Predefined) Functions:**
+
+These are functions provided by C standard libraries. You do not need to define them; you just include the relevant header file.
+
+**Examples:**
+
+- printf() – from <stdio.h> for output
+- scanf() – from <stdio.h> for input
+- strlen() – from <string.h> to find string length
+- sqrt() – from <math.h> to calculate square root
+
+**User-Defined Functions:**
+
+These are functions created by the programmer to perform specific tasks.
+
+**Types of User-Defined Functions Based on Parameters and Return Type:**
+
+Type 1: No parameter, no return value	Function does not take any input and does not return anything	void greet() { printf("Hello\n"); }
+Type 2: No parameter, returns value	Function does not take input but returns a value	int getNumber() { return 5; }
+Type 3: Parameter(s), no return value	Function takes input but does not return anything	void printSquare(int x) { printf("%d", x*x); }
+Type 4: Parameter(s), returns value	Function takes input and returns a value	int square(int x) { return x*x; }
+
+**Type 1:**
+```c
+#include <stdio.h>
+
+int main()
+{
+    greet(); // calling function
+    return 0;
+}
+
+void greet()
+{
+    printf("Hello, World!\n");
+}
+
+```
+**Type 2:**
+```c
+#include <stdio.h>
+
+int main()
+{
+    int num = getNumber();
+    printf("Number = %d", num);
+    return 0;
+}
+
+int getNumber()
+{
+    return 10;
+}
+
+```
+**Type 3:**
+```c
+#include <stdio.h>
+
+int main()
+{
+    printSquare(5);
+    return 0;
+}
+
+void printSquare(int x)
+{
+    printf("Square = %d\n", x*x);
+}
+
+```
+**Type 4:**
+```c
+#include <stdio.h>
+
+int main()
+{
+    int sum = add(7, 3);
+    printf("Sum = %d\n", sum);
+    return 0;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+```
+
+## Structure in C Programming
 
 ## Structure
 
@@ -1107,7 +1243,7 @@ struct Packed
 
 ```
 
-### Union
+## Union in C Programming
 
 A union is similar to a structure, but in union **all members share the same memory location** and we use keyword **union** to declare it. This is suitable if we don't have enough memory to provide seperate memory space to each member.
 
@@ -1378,7 +1514,7 @@ int main() {
 - Dynamic memory allocation = runtime memory allocation  
 
 
-## File Handling (Data Files Handling in C)
+## File Handling in C Programming
 
 ### Introduction
 
