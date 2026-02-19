@@ -1,61 +1,67 @@
-# secondrepo
+# Programmer
 
 Here in this repository I upload content related to C programming, PHP, HTML, CSS, and JavaScript.
 
 ## Table of contents
 - [About](#about)  
 - [Repository layout](#repository-layout)  
-- [Getting started](#getting-started)  
-- [Language notes](#language-notes)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)
+- [Pre-Requsit before starting](#pre-requsit-before-starting)  
 
 ## About
-Collection of example projects, snippets, and small demos for learning and reference in C, PHP, HTML/CSS, and JS.
+Collection of program questions, program solutions, and their explanation regarding C, PHP, HTML/CSS, and JS. It also consist ** readme file** in each folder which explain how to nevigate and purpose each folder content"
 
 ## Repository layout
 Suggested structure:
-- /c/ — C examples and important theroy
-- /php/ — PHP scripts 
-- /web/ — HTML, CSS, JavaScript projects 
-- /docs/ — documentation, notes  
-- README.md — this file  
-- LICENSE
+- /Programmer  
+  - /CSS
+   - CSS_programs_all (folder)  
+   - CSS_explained.md
+   - CSS_questions.md
+   - README.md
+  - /HTML
+   - HTML_programs_all (folder)  
+   - HTML_explained.md
+   - HTML_questions.md
+   - README.md
+  - /JS
+   - JS_programs_all (folder)  
+   - JS_explained.md
+   - JS_questions.md
+   - README.md
+  - /PHP_Programs
+   - PHP_programs_all (folder)  
+   - PHP_explained.md
+   - PHP_questions.md
+   - README.md
+  - /c_Programs  
+    - Array_Matrix_String (folder)  
+    - Basic_Programs (folder)  
+    - File_Handling (folder)  
+    - Function_Structure (folder)  
+    - Pointer (folder)  
+    - Series_and_Conversion (folder)  
+    - C_EXPLAINED.md
+    - C_QUESTION.md
+    - README.md
+  - readme.md — this file
+  - .gitignore
+  - .gitattributes
+  - LICENSE  
 
-## Getting started
-Requirements (examples):
-- C: gcc/clang, make  
-- PHP: PHP 7.4+ (CLI/webserver), xampp control panel
-- Web: modern browser like google chrome, brave, etc.
+## Pre-Requsit before starting
+Requirements for C Programming
+- Programming software with proper C compiler. (e.g: Dev C++ by **orwelldevcpp** in sourceforge.net
 
-Quick start:
-- Clone: git clone <repo-url>
-- Inspect folders and run examples per language (see below).
+Requirements for HTML, CSS and JS (Client-side scripting) - Frontend
+- Modern browser like google chrome, brave, etc.
+- Text editor like **SublimeText** or **Visual Studio Code** which are installed properly and necessary extensions are present.
 
-## Language notes
+Requirements for PHP (Server-side scripting) - Backend
+- Modern browser like google chrome, brave, etc.
+- Xampp control panel for setting the local web development environment
+- Text editor like **SublimeText** or **Visual Studio Code** which are installed properly and necessary extensions are present.
 
-C
-- Build: gcc -o bin/program src/main.c or use provided Makefile: make
-- Run: ./bin/program
-- Tools: clang-format, valgrind for memory checking
+Other requirements:
+- Github account to maintain the track of different versions of code.
+- git bash to help add, commit, push the change to the gitrepo and to peroform other git operations
 
-PHP
-- Built-in server (simple): php -S localhost:8000 -t public
-- Run scripts: php script.php
-- Tools: php-cs-fixer, PHPUnit for tests
-
-HTML / CSS / JS
-- Open project/index.html in browser or use live server (e.g., Live Server VS Code or npm http-server)
-- Tools: Prettier, ESLint, stylelint, bundlers (webpack, vite) as needed
-
-## Contributing
-- Create issues for bugs or feature requests  
-- Fork, create a branch, add changes, and submit a pull request  
-- Follow consistent code style and include tests/examples where appropriate
-
-## License
-This project is licensed under the MIT License. See LICENSE for details.
-
-## Contact
-Create GitHub issues for questions or contributions.
