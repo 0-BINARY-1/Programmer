@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table of 5</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Multiplication Table of 5</h2>
+        <button onclick="displayTable()">Calculate</button>
+        <p>The multiplication table is: </p><br>
+
+        <p id="res"></p>
+
+    <script>
+        // Function to display multiplication table of 5 using while loop
+        function displayTable() {
+            let i = 1;
+            //let table = "<h3>Multiplication Table of 5</h3><table>";
+            
+            // Using while loop to generate table
+            while(i <= 10) 
+            {
+                let result = 5 * i;
+                document.getElementById('res').innerHTML += '5 × ' + i + ' = ' + result + '<br>';;
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

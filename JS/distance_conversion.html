@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter to Kilometer Converter</title>
+</head>
+<body>
+
+        <h2>Meter to Kilometer Converter</h2>
+        <!-- Input field for meters -->
+        <input type="number" id="meters" placeholder="Enter distance in meters" step="any" min="0">
+        <button onclick="convert()">Convert</button>
+        <p>Result is: </p>
+
+        <p id = "res"></p>
+
+    <script>
+        // Function to convert meters to kilometers
+        function convert() 
+        {
+            // Get meters from input
+            let meters = Number(document.getElementById('meters').value);
+            
+            // Convert meters to kilometers (1 km = 1000 m)
+            let kilometers = meters / 1000;
+            
+            // Display result
+            document.getElementById('res').innerHTML = 
+            `
+                ${meters} meters=  ${kilometers} kilometers
+            `;
+        }
+    </script>
+</body>
+</html>

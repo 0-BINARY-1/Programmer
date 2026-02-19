@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+</head>
+<body>
+       <h2>Login Validation</h2>
+        <p>Hint: username: "students", password: "1234"</p><br>
+        <!-- Input fields for username and password -->
+        <h3>Enter credentials to login</h3>
+        <input type="text" id="username">
+        <input type="password" id="password">
+        <button onclick="validateLogin()">Login</button>
+        <p id="result"></p>
+
+    <script>
+        // Function to validate username and password
+        function validateLogin() 
+        {
+            // Get values from input fields
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            
+            // Predefined correct credentials
+            let UN = "students";
+            let PW = "1234";
+            
+            let resultDiv = document.getElementById('result');
+            
+            // Check if fields are empty
+            if(username === "" || password === "") 
+            {
+                resultDiv.innerHTML = "Please enter both username and password!";
+                return;
+            }
+            
+            // Validate credentials
+            if(username === UN && password === PW) 
+            {
+                resultDiv.innerHTML = "Login successful! Welcome, " + username + "!";
+            }
+            else 
+            {
+                resultDiv.innerHTML = "Invalid username or password!";
+            }
+        }
+    </script>
+</body>
+</html>

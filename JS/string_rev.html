@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+
+        <h2>String Operations</h2>
+        <!-- Input field for string -->
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="Operations()">Process</button>
+
+            <p>The result is: </p>
+            <p id="res"></p>
+
+    <script>
+        // Function to find length and reverse string
+        function Operations() 
+        {
+            // Get string from input
+            let str = document.getElementById('inputString').value;
+
+            // Find length of string
+            let length = str.length;
+            
+            // Reverse the string using for loop
+            let reversed = "";
+            for(let i = length - 1; i >= 0; i--)
+            {
+                reversed = reversed + str[i];
+            }
+            
+            // Display results
+            document.getElementById('res').innerHTML = 
+            `
+                Original String: "${str}"
+                Length: ${length} characters
+                Reversed String: "${reversed}"
+            `;
+        }
+    </script>
+</body>
+</html>

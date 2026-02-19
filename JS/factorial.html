@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+
+        <h2>Factorial Calculator</h2>
+        <!-- Input field for number -->
+        <input type="number" id="number">
+        <button onclick="calculateFactorial()">Calculate Factorial</button>
+        
+        <p>The output is: </p><br>
+
+        <p id="res"></p>
+
+    <script>
+        // Function to calculate factorial using for loop
+        function calculateFactorial() 
+        {
+            // Get number from input
+            let num = Number(document.getElementById('number').value);
+
+            // Calculate factorial using for loop
+            let factorial = 1;
+            for(let i = 1; i <= num; i++) 
+            {
+                factorial = factorial * i;
+            }
+            
+            // Display result
+            document.getElementById('res').innerHTML = 
+            `
+                Number: ${num} <br>
+                Factorial: ${factorial}
+            `;
+        }
+    </script>
+</body>
+</html>
