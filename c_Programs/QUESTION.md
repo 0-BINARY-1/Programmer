@@ -1,6 +1,6 @@
-Below are the questions that will be discussed in this course.
+# Below are the questions that will be discussed in this course
 
-# Basic Questions
+## Basic Questions
 
 1. WAP to find the sum of three numbers entered by the user.
 2. WAP to find the square of a given number.
@@ -21,8 +21,7 @@ Below are the questions that will be discussed in this course.
     1234
 14. WAP to calculate and display the value of y raised to x (z=y^x).
 
-
-# Series, Conversion
+## Series, Conversion
 
 1. WAP to display the following Fibonacci series: 0,1, 1, 2, 3, 5...... up to nth term.
 2. WAP to calculate and display the sum of digits present in the given numbers.
@@ -33,7 +32,7 @@ Below are the questions that will be discussed in this course.
 7. WAP to display the series: 1, 6, 11, 16.. .101.
 8. WAP to display the series: 5,9,13...............up to 10th term with loop starting form 1.
 
-# Array, Matrix and String related
+## Array, Matrix and String related
 
 1. WAP that reads marks of five subjects and calculates total marks & percentage.
 2. WAP to input 5 numbers in array and display the sum of those numbers.
@@ -47,7 +46,8 @@ Below are the questions that will be discussed in this course.
 10. WAP to convert the given string in sentence case into lowercase and uppercase.
 11. WAP that takes 5 strings and displays them in alphabetical order
 
-# Function and Structure
+## Function and Structure
+
 1. WAP to input 5 numbers and calculate their sum using array and function.
 2. WAP to print the sum of two numbers using all categories of user-defined functions.
 3. WAP to calculate the cumulative sum and cumulative multiplication using recursion.
@@ -57,15 +57,17 @@ Below are the questions that will be discussed in this course.
 7. WAP that takes emp_no, emp_fname, emp_Iname and date of birth and prints the record on screen using nested structure.
 8. WAP that reads name and address of different employees and rearranges them on the basis of name in alphabetical order.
 
-# Pointer
+## Pointer
+
 1. WAP to calculate the sum of two numbers using pointers.
 2. WAP to calculate the factorial of a given number using a pointer.
 3. WAP to swap two numbers showing call by values and call by reference.
 
-# File handling
+## File handling
+
 1. WAP to write and read characters to/from file using getc() and putc().
 2. WAP to write and read integers to/from file using getw() and putw().
-3. WAP to write and read rollno, name and percentage of 5 students to/from file using 
+3. WAP to write and read rollno, name and percentage of 5 students to/from file using
 fscanf() and fprintf().
 4. WAP to write and read a record to/from a data file using fwrite()/fread()
 5. WAP to write and read successive records to/from a data file using structure variables.
