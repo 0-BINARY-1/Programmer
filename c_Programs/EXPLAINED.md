@@ -5,7 +5,7 @@ I have provided basic info about each and every topic you will need during this 
 ## 📋 Table of Contents
 
 1. [Keywords and Identifier](#keywords-and-identifier)
-2. [Datatype](#datatype)
+2. [Datatype](#datatypes)
 3. [Pre-Processor Directives](#pre-processor-directives)
 4. [Compilation](#compilation)
 5. [Constants and Variables](#constants-and-variables)
@@ -14,7 +14,7 @@ I have provided basic info about each and every topic you will need during this 
 8. [Data Type Conversion](#data-type-conversion)
 9. [Input and Output Operations](#input-and-output-operations)
 10. [Control Statements](#control-statements)
-11. [Array in C Programming](#array-in-C-Programming)
+11. [Array in C Programming](#arrays-in-c-programming)
 12. [String in C Programming](#string-in-c-programming)
 13. [Functions in C](#functions-in-c)
 14. [Structure in C Programming](#structure-in-c-programming)
@@ -39,16 +39,20 @@ During variables decleration we need to specify the type of data that the variab
 
 ### C Data Types
 
-| Variable Type | Keyword       | Symbol | Bytes Used* | Range (Approx.)                  |
-|---------------|--------------|--------|-------------|-----------------------------------|
-| Integer       | `int`        | %d     | 2 or 4      | -32,768 to 32,767 (2 bytes) or -2,147,483,648 to 2,147,483,647 (4 bytes) |
-| Character     | `char`       | %c     | 1           | -128 to 127 (signed) or 0 to 255 (unsigned) |
-| Float         | `float`      | %f     | 4           | ~1.2E-38 to ~3.4E+38              |
-| Double        | `double`     | %lf    | 8           | ~2.3E-308 to ~1.7E+308            |
-| Short Integer | `short`      | %hd    | 2           | -32,768 to 32,767                 |
-| Long Integer  | `long`       | %ld    | 4           | -2,147,483,648 to 2,147,483,647   |
-| Unsigned Int  | `unsigned int` | %u   | 2 or 4      | 0 to 65,535 (2 bytes) or 0 to 4,294,967,295 (4 bytes) |
-| Long Double   | `long double`| %Lf    | 10, 12 or 16| ~3.4E-4932 to ~1.1E+4932          |
+<!-- markdownlint-disable MD060 -->
+
+| Variable Type | Keyword        | Symbol | Bytes Used*   | Range (Approx.)                                                 |
+| ------------- | -------------- | ------ | ------------- | --------------------------------------------------------------- |
+| Integer       | `int`          | %d     | 2 or 4        | -32,768 to 32,767 (2 bytes) or -2,147,483,648 to 2,147,483,647 (4 bytes) |
+| Character     | `char`         | %c     | 1             | -128 to 127 (signed) or 0 to 255 (unsigned)                    |
+| Float         | `float`        | %f     | 4             | ~1.2E-38 to ~3.4E+38                                            |
+| Double        | `double`       | %lf    | 8             | ~2.3E-308 to ~1.7E+308                                          |
+| Short Integer | `short`        | %hd    | 2             | -32,768 to 32,767                                               |
+| Long Integer  | `long`         | %ld    | 4             | -2,147,483,648 to 2,147,483,647                                 |
+| Unsigned Int  | `unsigned int` | %u     | 2 or 4        | 0 to 65,535 (2 bytes) or 0 to 4,294,967,295 (4 bytes)          |
+| Long Double   | `long double`  | %Lf    | 10, 12 or 16  | ~3.4E-4932 to ~1.1E+4932                                        |
+
+<!-- markdownlint-enable MD060 -->
 
 ---
 
@@ -139,20 +143,24 @@ Escape sequences are special combinations of character  starting with **\** and 
 
 ### List of Escape Sequences
 
-| Escape Sequence | Description |
-|-----------------|-------------|
-| `\n`            | Newline – moves the cursor to the next line |
-| `\t`            | Horizontal tab – adds a tab space |
-| `\\`            | Backslash – prints a single backslash `\` |
-| `\'`            | Single quote – prints a single quote `'` |
-| `\"`            | Double quote – prints a double quote `"` |
+<!-- markdownlint-disable MD060 -->
+
+| Escape Sequence | Description                                                      |
+| --------------- | ---------------------------------------------------------------- |
+| `\n`            | Newline – moves the cursor to the next line                     |
+| `\t`            | Horizontal tab – adds a tab space                               |
+| `\\`            | Backslash – prints a single backslash `\`                      |
+| `\'`            | Single quote – prints a single quote `'`                        |
+| `\"`            | Double quote – prints a double quote `"`                       |
 | `\r`            | Carriage return – moves the cursor to the beginning of the line |
-| `\b`            | Backspace – moves the cursor one position back |
-| `\f`            | Form feed – advances the paper feed in printers (rarely used) |
-| `\v`            | Vertical tab – vertical tab space |
-| `\a`            | Alert (bell) – produces a beep sound |
-| `\?`            | Question mark – prints `?` (used to avoid trigraphs in C) |
-| `\0`            | Null character – represents the end of a string |
+| `\b`            | Backspace – moves the cursor one position back                  |
+| `\f`            | Form feed – advances the paper feed in printers (rarely used)   |
+| `\v`            | Vertical tab – vertical tab space                               |
+| `\a`            | Alert (bell) – produces a beep sound                            |
+| `\?`            | Question mark – prints `?` (used to avoid trigraphs in C)       |
+| `\0`            | Null character – represents the end of a string                 |
+
+<!-- markdownlint-enable MD060 -->
 
 **Note:**  
 
@@ -477,20 +485,19 @@ float numbers[5] = { 2.2, 3.4, 3.2, 3.0, 4.555 };
 
 ```
 
-**Key Features of Arrays: **
-
+**Key Features of Arrays:**
 
 - Each element is accessed using an **index** (index starts from `0`).
 - We can use **iteration** using loops to insert and access the values.
 - Array can be **one-dimensional**, **two-dimensional**, or **multi-dimensional**.
 
-**Types of Arrays: **
+**Types of Arrays:**
 
-| **Type**         | **Description**                          | **Example**      |
-|------------------|----------------------------------------|------------------|
-| **1D Array**     | Stores data in a single row.           | `int arr[5];`    |
-| **2D Array**     | Stores data in rows and columns.       | `int mat[3][3];` |
-| **Multidimensional Array** | Stores data in more than two dimensions. | `int arr[2][3][4];` |
+| **Type**                   | **Description**                                | **Example**          |
+| -------------------------- | ---------------------------------------------- | -------------------- |
+| **1D Array**               | Stores data in a single row.                   | `int arr[5];`        |
+| **2D Array**               | Stores data in rows and columns.               | `int mat[3][3];`     |
+| **Multidimensional Array** | Stores data in more than two dimensions.       | `int arr[2][3][4];`  |
 
 ### One-Dimensional (1D) Array
 
@@ -682,9 +689,9 @@ This table represents each character of the string **"Hello"** along with its **
 
 ### Indexed Table
 
-| **Index** | 0 | 1 | 2 | 3 | 4 | 5 |
-|-----------|---|---|---|---|---|---|
-| **Letter** | H | e | l | l | o | (space)|
+| **Index**  | 0 | 1 | 2 | 3 | 4 | 5       |
+| ---------- | - | - | - | - | - | ------- |
+| **Letter** | H | e | l | l | o | (space) |
 
 ---
 
@@ -843,6 +850,7 @@ return_type function_name(parameter_list) {
 ```
 
 **Example:**
+
 ```c
 #include <stdio.h>
 
@@ -885,15 +893,19 @@ These are functions created by the programmer to perform specific tasks.
 
 **Types of User-Defined Functions Based on Parameters and Return Type:**
 
-| Function Type                        | Description                                         | Example Usage                                  |
-| ------------------------------------ | --------------------------------------------------- | ---------------------------------------------- |
-| Type 1: No parameter, no return value | Function does not take any input and does not return anything | `void greet() { printf("Hello\n"); }`|
-| Type 2: No parameter, returns value   | Function does not take input but returns a value   | `int getNumber() { return 5; }`               |
-| Type 3: Parameter(s), no return value | Function takes input but does not return anything | `void printSquare(int x) { printf("%d", x*x); }`|
-| Type 4: Parameter(s), returns value   | Function takes input and returns a value           | `int square(int x) { return x*x; }`           |
+<!-- markdownlint-disable MD060 -->
 
+| Function Type                         | Description                                          | Example Usage                                   |
+| ------------------------------------- | ---------------------------------------------------- | ----------------------------------------------- |
+| Type 1: No parameter, no return value | Function does not take any input and does not return anything | `void greet() { printf("Hello\n"); }`        |
+| Type 2: No parameter, returns value   | Function does not take input but returns a value     | `int getNumber() { return 5; }`                 |
+| Type 3: Parameter(s), no return value | Function takes input but does not return anything    | `void printSquare(int x) { printf("%d", x*x); }` |
+| Type 4: Parameter(s), returns value   | Function takes input and returns a value             | `int square(int x) { return x*x; }`             |
+
+<!-- markdownlint-enable MD060 -->
 
 **Type 1:**
+
 ```c
 #include <stdio.h>
 
@@ -909,7 +921,9 @@ void greet()
 }
 
 ```
+
 **Type 2:**
+
 ```c
 #include <stdio.h>
 
@@ -926,7 +940,9 @@ int getNumber()
 }
 
 ```
+
 **Type 3:**
+
 ```c
 #include <stdio.h>
 
@@ -942,7 +958,9 @@ void printSquare(int x)
 }
 
 ```
+
 **Type 4:**
+
 ```c
 #include <stdio.h>
 
@@ -1306,6 +1324,7 @@ A **pointer** is a variable that stores the **memory address** of another variab
 ---
 
 ### 2. Use of Pointers
+
 Pointers are used to:
 
 - Access and modify variables indirectly
@@ -1317,9 +1336,11 @@ Pointers are used to:
 ---
 
 ### 3. Pointer Variable
+
 A pointer variable stores the address of another variable.
 
 Example:
+
 ```c
 int a = 10;
 int *p;
@@ -1333,12 +1354,15 @@ p = &a;
 ---
 
 ### 4. Pointer Declaration
+
 Syntax:
+
 ```c
 data_type *pointer_name;
 ```
 
 Examples:
+
 ```c
 int *p;
 float *fp;
@@ -1348,6 +1372,7 @@ char *cp;
 ---
 
 ## 5. Pointer Initialization
+
 Assigning an address to a pointer.
 
 ```c
@@ -1356,6 +1381,7 @@ int *p = &a;
 ```
 
 Best practice: initialize pointers with **NULL** to avoid garbage values.
+
 ```c
 int *p = NULL;
 ```
@@ -1363,6 +1389,7 @@ int *p = NULL;
 ---
 
 ### 6. Double Pointer
+
 A pointer that stores the address of another pointer.
 
 ```c
@@ -1375,12 +1402,14 @@ int **pp = &p;
 - `pp` → address of `p`
 
 Used in:
+
 - Dynamic 2D arrays
 - Modifying pointers in functions
 
 ---
 
 ### 7. Void Pointer
+
 A generic pointer that can **hold address of any data type**. When a pointer does not have a specific datatype.
 
 ```c
@@ -1394,21 +1423,28 @@ vp = &a;
 ```c
 printf("%d", *(int*)vp); 
 ```
+
 Above it is being converted to integer data type
+
 ---
 
 ### Memory Allocation
+
 Different type of memory allocation ways are discussed below:
+
 ### 8. Static Memory Allocation
+
 Memory is allocated at **compile time**.
 
 Example:
+
 ```c
 int a = 10;
 int arr[10];
 ```
 
 **Features:**
+
 - Fixed size
 - Faster access
 - Cannot be resized
@@ -1417,9 +1453,11 @@ int arr[10];
 ---
 
 ### 9. Dynamic Memory Allocation
+
 Memory allocated at **runtime** using heap.
 
 Advantages:
+
 - Flexible size
 - Efficient memory usage
 - Controlled by programmer
@@ -1429,6 +1467,7 @@ Advantages:
 ### About heap memory
 
 Heap memory is a region of RAM used for dynamic memory allocation at runtime.
+
 - Memory is allocated and freed by the programmer.
 - Managed using pointers.
 - Allocation happens during program execution (not compile time).
@@ -1441,6 +1480,7 @@ Heap memory is a region of RAM used for dynamic memory allocation at runtime.
 - Building dynamic structures (linked lists, trees, graphs)
 
 ### 10. Memory Allocation Functions
+
 Defined in `<stdlib.h>`
 
 **(a) malloc():**
@@ -1516,7 +1556,6 @@ int main() {
 - Static memory allocation  = compile time memory allocation
 - Dynamic memory allocation = runtime memory allocation  
 
-
 ## File Handling in C Programming
 
 ### Introduction
@@ -1527,10 +1566,10 @@ storage), files provide **permanent storage**.
 
 **Uses:**
 
--   Saving user data
--   Storing results
--   Handling large data
--   Logging information
+- Saving user data
+- Storing results
+- Handling large data
+- Logging information
 
 C file handling functions are available in:
 
@@ -1540,11 +1579,11 @@ C file handling functions are available in:
 
 **Basic Steps:**
 
-1.  Open a file
-2.  Perform operations (read/write)
-3.  Close the file
+1. Open a file
+2. Perform operations (read/write)
+3. Close the file
 
-------------------------------------------------------------------------
+---
 
 **File Pointer:**
 
@@ -1563,9 +1602,9 @@ FILE *fp;
 fp = fopen("data.txt", "r");
 ```
 
--   `FILE` is a structure in `stdio.h`
--   `fp` holds file address
--   `fopen()` returns `NULL` if file open fails
+- `FILE` is a structure in `stdio.h`
+- `fp` holds file address
+- `fopen()` returns `NULL` if file open fails
 
 **Safe Check:**
 
@@ -1575,7 +1614,7 @@ if (fp == NULL) {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
 **File Opening Syntax:**
 
@@ -1590,77 +1629,77 @@ Example:
 fp = fopen("marks.txt", "w");
 ```
 
-------------------------------------------------------------------------
+---
 
 ### File Operating Modes
 
 **Read (`r`):**
 
--   Opens file for reading\
--   File must exist
+- Opens file for reading\
+- File must exist
 
 ``` c
 fp = fopen("data.txt", "r");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Write (`w`):**
 
--   Creates new file\
--   Overwrites existing file
+- Creates new file\
+- Overwrites existing file
 
 ``` c
 fp = fopen("data.txt", "w");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Append (`a`):**
 
--   Adds data to end\
--   Creates file if not exists
+- Adds data to end\
+- Creates file if not exists
 
 ``` c
 fp = fopen("data.txt", "a");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Read + Write (`r+`):**
 
--   Reading and writing allowed\
--   File must exist\
--   Pointer starts at beginning
+- Reading and writing allowed\
+- File must exist\
+- Pointer starts at beginning
 
 ``` c
 fp = fopen("data.txt", "r+");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Append + Read (`a+`):**
 
--   Read and append\
--   Writing occurs at end\
--   Creates file if missing
+- Read and append\
+- Writing occurs at end\
+- Creates file if missing
 
 ``` c
 fp = fopen("data.txt", "a+");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Write + Read (`w+`):**
 
--   Read and write allowed\
--   Overwrites file
+- Read and write allowed\
+- Overwrites file
 
 ``` c
 fp = fopen("data.txt", "w+");
 ```
 
-------------------------------------------------------------------------
+---
 
 **Basic Example Program:**
 
@@ -1680,7 +1719,7 @@ int main() {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
 **Closing a File:**
 
@@ -1690,9 +1729,7 @@ Always close files to save data and free memory.
 fclose(fp);
 ```
 
-
-------------------------------------------------------------------------
-
+---
 
 ---
 
@@ -1702,7 +1739,6 @@ Thank you for reading this guide on **C Programming**.
 
 If this README helped you, consider starring the repository and sharing it with others who are learning C programming.
 
-Happy Coding!
-
 ---
 
+Happy Coding!
