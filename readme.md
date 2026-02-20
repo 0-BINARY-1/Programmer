@@ -33,10 +33,9 @@ Suggested structure:
      3. JS_questions.md
      4. README.md
   - /PHP_Programs
-     1. PHP_programs_all (folder)  
-     2. PHP_explained.md
-     3. PHP_questions.md
-     4. README.md
+     1. PHP_programs_all (folder)
+     2. PHP_questions.md
+     3. README.md
   - /c_Programs  
     1. Array_Matrix_String (folder)  
     2. Basic_Programs (folder)  
