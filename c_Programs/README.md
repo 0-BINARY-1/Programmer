@@ -1,11 +1,12 @@
 # C Programming
 
 C is a powerful, general-purpose programming language:
-1. Developed in the early 1970s by Dennis Ritchie. 
-2. Widely used for system programming, developing operating systems, embedded systems, and high-performance applications. 
+
+1. Developed in the early 1970s by Dennis Ritchie.
+2. Widely used for system programming, developing operating systems, embedded systems, and high-performance applications.
 3. Provides low-level memory access, a simple set of keywords, and a clean style, making it efficient and flexible.
 
-# Repository content:
+## Repository content
 
 1. Basic programming in C to know:
     a. Syntax, Constants and variables
@@ -20,7 +21,7 @@ C is a powerful, general-purpose programming language:
 
     a. User-defined function and its types
     b. Structure, Union
-    c. Pointer 
+    c. Pointer
     d. File handling and file pointer
 
 3. Simple application that can be developed are like:
@@ -36,10 +37,8 @@ C is a powerful, general-purpose programming language:
    d. Web Servers (e.g., Nginx)
    e. Game Engines (e.g., Doom engine)
 
-
-
 **Note:
 
-- There will be code only of the questions listed in  QUESTION.md file. 
+- There will be code only of the questions listed in  QUESTION.md file.
 - Explanation of each topic listed above in EXPLAINED.md file.
 - Seperate folder for different types of questions are created.

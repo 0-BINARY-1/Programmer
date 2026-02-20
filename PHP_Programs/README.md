@@ -1,4 +1,4 @@
- # Introduction to PHP
+# Introduction to PHP
 
 ## What is PHP?
 
@@ -7,8 +7,6 @@
 - PHP code runs on the **server**, not in the user’s browser.
 - The server processes the PHP and sends the **output (usually HTML)** to the browser.
 - It is widely used with databases like **MySQL** to build data-driven applications.
-
-
 
 ### Key Features of PHP
 
@@ -25,35 +23,45 @@
 We use PHP to:
 
 ### 1. Create Dynamic Web Pages
+
 PHP can change page content based on user actions, time, or data from a database.
 
 **Example:**
+
 - Showing a user’s name after login
 - Displaying different content for different users
 
 ### 2. Handle Forms
+
 PHP collects and processes form data.
 
 **Example:**
+
 - Login forms  
 - Registration forms  
 - Contact forms  
 
 ### 3. Work with Databases
+
 PHP can connect to databases to:
+
 - Insert data  
 - Update data  
 - Delete data  
 - Retrieve data  
 
 ### 4. Manage Sessions and Cookies
+
 Used for:
+
 - User authentication  
 - Tracking user activity  
 - Storing user preferences  
 
 ### 5. Build Full Web Applications
+
 Examples:
+
 - E-commerce sites  
 - Content Management Systems (WordPress uses PHP)  
 - Social networking sites  
@@ -99,8 +107,9 @@ echo "The sum is: " . $sum;
 </html>
 ```
 
-### Output:
-```
+### Output
+
+```text
 The sum is: 15
 ```
 
@@ -113,9 +122,11 @@ The sum is: 15
 - PHP variables start with **$**.
 
 ---
+
 ## Pre-requsites before doing php programming
 
 PHP is a server side scripting language which runs on the server so:
+
 - We need a **server**.
 - We need a code editor
 - Save the php file with **.php** extension to run on the web browser
@@ -123,7 +134,9 @@ PHP is a server side scripting language which runs on the server so:
 **Note:**
 
 ### Server
+
 To simulate our own computer as a server we can use various programs like listed below:
+
 - Xampp Control Panel
 - Laragon
 - EasyPHP
@@ -149,7 +162,6 @@ I am using the **Visual Studio Code** as my code editor.
 - Step 1: Go to your browser and type **localhost/phpmyadmin**
 - Step 2: Look for the database your are searching for on the left side and inside that database there will be necessary data.
 
-
 ### What does a php code consist in general
 
 1. Connection code to connect to different database like **MySQL, PostgreSQL, MongoDB, MarianDB**, etc
@@ -157,9 +169,7 @@ I am using the **Visual Studio Code** as my code editor.
 3. **Database, table and other elements** create code as required.
 4. Data **insert, fetch, update and delete** code
 
-
-
-# PHP Basics with Database Operations
+## PHP Basics with Database Operations
 
 ## 1. Declaring Variables in PHP
 
@@ -210,7 +220,9 @@ $name = "Santosh";
 echo "Hello " . $name;
 ?>
 ```
-Here **(.)** between **"Hello"** and **$name** is concatenating them.
+
+**Note:** The **(.)** between **"Hello"** and **$name** is concatenating them
+
 ---
 
 ## 3. Taking Input from User
@@ -259,7 +271,8 @@ echo "Age: " . $age;
 
 Usually done with **MySQL** and **MySQLi/PDO**.
 
-Below the **the procedural method** is used. But in the programs I have used the **Object Oriented Programming method**.
+Below the **the procedural method** is used. But in the programs I have used the **Object Oriented Programming method**
+
 ---
 
 ## Step 1: Connect to Database
