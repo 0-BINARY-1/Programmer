@@ -36,33 +36,4 @@ if ($results === TRUE)
     echo "Update failed: " . $conn->error;
 }
 $conn->close();
-
-// BELOW IS THE UPDATE CODE ONLY
-
-/*
-
-$servername = "localhost"; 
-$username = "root";
-$password = "";
-$dbname = "myschooldb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "UPDATE students 
-        SET NAMES = 'Rakesh', EMAIL = 'rakesh345@gmail.com' 
-        WHERE ROLLNO = 2";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
-} else {
-    echo "Update failed: " . $conn->error;
-}
-
-$conn->close();
-?>*/
-
 ?>
