@@ -26,7 +26,7 @@ Example:
 
 ## Objectives of Learning CSS
 
-After completing this CSS course, you should be able to:
+**After completing this CSS course, you should be able to:**
 
 1. Understand how CSS works with HTML
 2. Apply styles using selectors
@@ -48,68 +48,55 @@ The main objective is to enable learners to design visually appealing, responsiv
 
 CSS is widely used in:
 
-1. Website Design
+**Website Design**  
 
 Controls the look and feel of websites.
 
-2. Responsive Web Development
+**Responsive Web Development**  
 
 Adapts layouts for:
 
-Mobile devices
+1. Mobile devices
+2. Tablets
+3. Desktop screens
 
-Tablets
-
-Desktop screens
-
-3. Web Applications
+**Web Applications**
 
 Used with modern frameworks such as:
 
-React
+1. React
+2. Angular
+3. Vue
 
-Angular
-
-Vue
-
-4. UI/UX Design
+**UI/UX Design**
 
 Improves user experience through spacing, alignment, and visual hierarchy.
 
-5. Animations and Effects
+**Animations and Effects**
 
 Used to create:
 
-Hover effects
+1. Hover effects
+2. Transitions
+3. Keyframe animations
 
-Transitions
-
-Keyframe animations
-
-6. Theming and Customization
+**Theming and Customization**
 
 Allows global styling for large applications.
 
-4. Prerequisites Before Starting CSS Course
-Required:
+## Prerequisites Before Starting CSS Course
 
-Basic knowledge of HTML
+1. Basic knowledge of HTML
+2. Understanding of HTML tags and structure
+3. Basic computer skills
 
-Understanding of HTML tags and structure
+## Better if you know about following:
 
-Basic computer skills
+1. Web browsers (Chrome, Firefox, Edge)
+2. Developer tools (Inspect Element)
+3. Text editors (VS Code, Notepad++)
 
-Recommended:
+**Important:**
 
-Familiarity with:
-
-Web browsers (Chrome, Firefox, Edge)
-
-Developer tools (Inspect Element)
-
-Text editors (VS Code, Notepad++)
-
-Important:
-
-CSS requires understanding of HTML structure.
-It is recommended to complete HTML basics before starting CSS.
+1. CSS requires understanding of HTML structure.
+2. It is recommended to complete HTML basics before starting CSS.
