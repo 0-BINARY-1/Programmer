@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text scroll using CSS</title>
+        <style>
+            p {
+                animation: scroll 25s linear infinite;
+                white-space: nowrap;
+                overflow:hidden;
+            }
+            @keyframes scroll 
+            {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(0%); }
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+        <b>Hello! This is the scrolling text.</b>
+        </p>
+    </body>
+</html>
