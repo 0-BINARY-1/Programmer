@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 align="center">Candidate Details</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type = "text" name = "name" size="20"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type = "number" size="20" name="number"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type = "radio" name="gender" value="male"> Male
+                    <input type = "radio" name="gender" value="female"> Female
+                    <input type = "radio" name="gender" value="other"> Other
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox"> Reading
+                    <input type="checkbox"> Sports
+                    <input type="checkbox"> Music
+                </td>
+            </tr>
+            <tr>
+                <td>Upload File:</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea rows="5" cols="30"></textarea></td> <!-- 5 = height to 5 lines of text 30 = width to 30 characters -->
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
