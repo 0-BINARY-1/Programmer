@@ -1,6 +1,6 @@
 # Programmer
 
-Here in this repository I upload content related to C programming, PHP, HTML, CSS, and JavaScript.
+Here in this repository I upload content related to C programming, PHP, HTML, CSS, and JavaScript. Replace the images, audio and video content with your own files to have it work properly.
 
 ## Table of contents
 
