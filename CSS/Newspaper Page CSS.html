@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Newspaper Page</title>
+    <style>
+        .newspaper-article 
+        {
+            width: 900px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+            font-family: Times New Roman, serif;
+            background-color: rgb(211, 211, 211);
+        }
+        .header 
+        {
+            text-align: center;
+            border-bottom: 5px double black;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        .header h1 
+        {
+            margin: 0;
+            font-size: 40px;
+        }
+        .header p 
+        {
+            margin: 5px 0;
+            font-style: italic;
+        }
+        .content 
+        {
+            overflow: hidden;
+            width: 100%;
+            background-color: lightgray;
+        }
+        /* Image gallery container for 3 side-by-side images */
+        .image-gallery {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        
+        .img-item {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .img-item img 
+        {
+            width: 100%;
+            height: 80%;
+            border: 1px solid #333;
+        }
+        
+        .img-item p 
+        {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: linen;
+            border-left: 2px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+     /*   .img-left 
+        {
+            float: left;
+            width: 25%;
+        }
+        .img-left img 
+        {
+            width: 100%;
+        }
+        .img-left p 
+        {
+            margin-top: 10px;
+            font-size: 25px;
+            width: 90%;
+            text-align: center;
+            background-color: linen;
+            border-left: 2px solid black;
+        }
+        .img-middle 
+        {
+            float: center;
+            width: 25%;
+        }
+        .img-middle img 
+        {
+            width: 100%;
+        }
+        .img-middle p 
+        {
+            float: middle;
+            margin-top: 10px;
+            font-size: 25px;
+            width: 90%;
+            text-align: center;
+            background-color: linen;
+            border-left: 2px solid black;
+        }
+        .img-right 
+        {
+            float: right;
+            width: 25%;
+        }
+        .img-right img 
+        {
+            width: 100%;
+        }
+        .img-right p 
+        {
+            float: right;
+            margin-top: 10px;
+            font-size: 25px;
+            width: 90%;
+            text-align: center;
+            background-color: linen;
+            border-left: 2px solid black;
+        }*/
+        .two-columns 
+        {
+            float: left;
+            width: 100%;
+            column-count: 3;
+            column-gap: 15px;
+            text-align: justify;
+            background-color: aqua;
+            border-radius: 5px;
+        }
+        .two-columns p {
+            margin-top: 0;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="newspaper-article">
+        <div class="header">
+            <h1>THE DAILY TIMES NEWS</h1>
+            <p>Monday, January 1st, 2026 | Price: $2.50 | Edition: 1</p>
+        </div>
+        <div class="content">
+            <div class="image-gallery">
+                <div class="img-item">
+                    <img src="programmer.jpg" alt="Hacker hacking the government system using high end laptop while sitting at the desk in a room with book shelf.">
+                    <p>Young hacker at action - View 1</p>
+                </div>
+                <div class="img-item">
+                    <img src="growth.png" alt="Economic growth illustration">
+                    <p>Economic Growth - View 2</p>
+                </div>
+                <div class="img-item">
+                    <img src="award.png" alt="School receiving national award">
+                    <p>School Wins National Award - View 3</p>
+                </div>
+            </div>
+            <div class="two-columns">
+                <p>
+                    <strong>Young Hacker Breaches Government Systems</strong><br> A 19-year-old hacker, known online as "Krypton," 
+                    successfully infiltrated the central government's security network last night. Officials confirmed the breach 
+                    targeted classified databases and communication logs. The hacker reportedly left a digital signature reading 
+                    "Your walls are paper." Authorities have launched an emergency investigation.
+                </p>
+                <p>
+                    <strong>Economy Shows Growth</strong><br> The country's economy grew by 7% this quarter. Experts credit increased
+                    exports and local manufacturing. Small businesses are recovering well after the recent challenges. The stock 
+                    market also reached an all-time high yesterday.
+                </p> 
+                <p>
+                    <strong>School Wins National Award</strong><br> Green Valley School received the National Excellence Award for 
+                    education. The principal thanked teachers and students for their hard work. The school is known for its innovative
+                    teaching methods and sports facilities.
+                </p>
+                <p>
+                    <strong>Weather Forecast</strong><br> Sunny with clouds. High 28°C, Low 18°C. Light winds expected in the evening.
+                    No rain predicted for the next three days.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
