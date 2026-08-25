@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form>
+
+        <label>Name:</label>
+        <input type="text" name="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email">
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="tel" name="phone">
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+        <br><br>
+
+        <!-- Dropdown -->
+        <label>Faculty:</label>
+        <select name="faculty">
+            <option value="science">Science</option>
+            <option value="biology">Biology</option>
+        </select>
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" onclick="uncheckRadio(this)"> Male
+        <input type="radio" name="gender" onclick="uncheckRadio(this)"> Female
+        <input type="radio" name="gender" onclick="uncheckRadio(this)"> Other
+        <br><br>
+
+        <!-- Checkboxes -->
+        <label>Hobbies:</label>
+        <input type="checkbox" name="hobby"> Reading
+        <input type="checkbox" name="hobby"> Music
+        <input type="checkbox" name="hobby"> Sports
+        <br><br>
+
+        <!-- Textarea -->
+        <label>Address:</label><br>
+        <textarea name="address" rows="4" cols="40"></textarea>
+        <br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" onclick="alert('Form Submitted Successfully!');">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
